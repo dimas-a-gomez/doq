@@ -1,0 +1,51 @@
+---
+title: "Blogs Recomendados"
+description: "Muestra tarjetas de sitios recomendados con nombre y descripción."
+order: 6
+---
+
+El shortcode de **Blogs Recomendados** genera un contenedor con tarjetas estilizadas para destacar enlaces externos de forma visual y organizada.
+<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh-MLOl8TM7G-2mR8gW4-Zb2O_mTbQ7JRchfHtrNnJF2d3V6KNU-9hkf20cAOIRjqmc-uxquqLq8EIDYkvxJ_wVUCEayMCqzZpBFCtNV4uJ_GoYtEMSZ4_yOXXi5DdgDH2bJ4FNbSYoiufjVBcbcRIngZaObooOYyWnh1dDoPgzUOrA6Yp0mivM2SyQHfk/s1600/Screenshot%202026-03-09%20at%2015-29-00%20Shortcodes%20v2.0%20de%20MountainB%20v1.2.0.png" alt="Descripción" width="100%" />
+
+---
+
+## 1. Código del Shortcode
+
+Copia este bloque HTML y pégalo en la pestaña **"Vista de HTML"** de tu editor en Blogger:
+
+```html
+<div class="mt-recommended">
+    <a href="URL_DEL_BLOG" class="mt-blog-card" target="_blank">
+        <div class="mt-blog-icon">
+            <svg class="i i-file-lines" viewBox="0 0 24 24">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Zm2 11H8m8 4H8m4-8H8"></path>
+            </svg>
+        </div>
+        <div class="mt-blog-info">
+            <span class="mt-blog-name">#NOMBRE_DEL_BLOG</span>
+            <span class="mt-blog-desc">#DESCRIPCION_DEL_BLOG</span>
+        </div>
+    </a>
+
+    <a href="URL_DEL_BLOG" class="mt-blog-card" target="_blank">
+        <div class="mt-blog-icon">
+            <svg class="i i-file-lines" viewBox="0 0 24 24">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Zm2 11H8m8 4H8m4-8H8"></path>
+            </svg>
+        </div>
+        <div class="mt-blog-info">
+            <span class="mt-blog-name">#NOMBRE_DEL_BLOG</span>
+            <span class="mt-blog-desc">#DESCRIPCION_DEL_BLOG</span>
+        </div>
+    </a>
+</div>
+```
+
+---
+
+## 2. Instrucciones de Personalización
+Para cada tarjeta dentro del contenedor, debes actualizar los siguientes campos:
+
+- **URL_DEL_BLOG:** Reemplaza este valor por la dirección web completa del sitio recomendado.
+- **#NOMBRE_DEL_BLOG:** Escribe el título o nombre oficial del sitio.
+- **#DESCRIPCION_DEL_BLOG:** Añade una breve frase que describa el contenido de ese blog.
