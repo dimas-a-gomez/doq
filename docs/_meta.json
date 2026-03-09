@@ -31,8 +31,8 @@
     "title": "Aviso de Cookies",
     "icon": "Cookie"
   },
-  "gadgets": {
-    "title": "Gadgets",
-    "icon": "Smartphone"
+  "shortcodes": {
+    "title": "Shortcodes",
+    "icon": "CodeXml"
   }
 }
