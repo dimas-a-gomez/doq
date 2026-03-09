@@ -12,11 +12,28 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 
+// Función para convertir nombres como "arrow-down" o "house" a "ArrowDown" o "House"
+function toPascalCase(str: string) {
+  return str
+    .split('-')
+    .map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
+    .join('');
+}
+
 export function IconRender({ name }: { name?: string }) {
   if (!name) return null;
+  
+  // Convertimos el nombre que pongas en _meta.json al formato que usa React (PascalCase)
+  const pascalName = toPascalCase(name);
+  
   // @ts-ignore
-  const IconComponent = Icons[name];
-  if (!IconComponent) return null;
+  const IconComponent = Icons[pascalName] || Icons[name];
+  
+  if (!IconComponent) {
+    console.warn(`Icon "${name}" (tried "${pascalName}") not found in lucide-react.`);
+    return null;
+  }
+  
   return <IconComponent className="mr-2 h-[18px] w-[18px]" />;
 }
 

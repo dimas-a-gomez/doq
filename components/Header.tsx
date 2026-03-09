@@ -1,9 +1,9 @@
 "use client";
 
 import Link from "next/link";
-import { Search, Moon, Sun, Menu, Github, X } from "lucide-react";
+import { Search, Moon, Sun, Menu, Github, X, Languages } from "lucide-react";
 import { useState, useEffect, useRef } from "react";
-import { useRouter, usePathname } from "next/navigation";
+import { useRouter, usePathname, useSearchParams } from "next/navigation";
 import type { NavItem } from "@/lib/mdx";
 import { NavGroup } from "./Navigation";
 
@@ -16,9 +16,53 @@ export function Header({ navItems = [] }: HeaderProps) {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
+  const [searchResults, setSearchResults] = useState<any[]>([]);
+  const [isSearching, setIsSearching] = useState(false);
+  
+  const searchParams = useSearchParams();
+  const [currentLang, setCurrentLang] = useState("ES");
+  const [isLangMenuOpen, setIsLangMenuOpen] = useState(false);
+
   const searchInputRef = useRef<HTMLInputElement>(null);
   const router = useRouter();
   const pathname = usePathname();
+
+  const languages = [
+    { code: "ES", name: "Español" },
+    { code: "EN", name: "English" },
+    { code: "PT", name: "Português" },
+  ];
+
+  const availableLangs = languages.filter((l) => l.code !== currentLang);
+
+  useEffect(() => {
+    const langParam = searchParams.get("lang");
+    if (langParam && ["ES", "EN", "PT"].includes(langParam.toUpperCase())) {
+      setCurrentLang(langParam.toUpperCase());
+    }
+  }, [searchParams]);
+
+  useEffect(() => {
+    if (!searchQuery.trim()) {
+      setSearchResults([]);
+      return;
+    }
+
+    const delayDebounceFn = setTimeout(async () => {
+      setIsSearching(true);
+      try {
+        const res = await fetch(`/api/search?q=${encodeURIComponent(searchQuery)}`);
+        const data = await res.json();
+        setSearchResults(data);
+      } catch (error) {
+        console.error("Search error:", error);
+      } finally {
+        setIsSearching(false);
+      }
+    }, 300);
+
+    return () => clearTimeout(delayDebounceFn);
+  }, [searchQuery]);
 
   useEffect(() => {
     // Check local storage or system preference on mount
@@ -77,11 +121,21 @@ export function Header({ navItems = [] }: HeaderProps) {
 
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
-    if (searchQuery.trim()) {
-      router.push(`/docs`);
+    if (searchResults.length > 0) {
+      router.push(`/docs/${searchResults[0].slug}`);
       setIsSearchOpen(false);
       setSearchQuery("");
     }
+  };
+
+  const handleLangChange = (code: string) => {
+    setCurrentLang(code);
+    setIsLangMenuOpen(false);
+    
+    // Update URL with new language
+    const currentParams = new URLSearchParams(Array.from(searchParams.entries()));
+    currentParams.set("lang", code.toLowerCase());
+    router.push(`${pathname}?${currentParams.toString()}`);
   };
 
   return (
@@ -119,6 +173,36 @@ export function Header({ navItems = [] }: HeaderProps) {
             </button>
 
             <nav className="flex items-center gap-2">
+              <div className="relative">
+                <button
+                  onClick={() => setIsLangMenuOpen(!isLangMenuOpen)}
+                  className="p-2 text-gray-500 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors rounded-md hover:bg-black/5 dark:hover:bg-white/5 flex items-center gap-1"
+                  title="Change Language"
+                >
+                  <Languages className="h-5 w-5" />
+                  <span className="text-xs font-medium uppercase">{currentLang}</span>
+                </button>
+                {isLangMenuOpen && (
+                  <>
+                    <div 
+                      className="fixed inset-0 z-40" 
+                      onClick={() => setIsLangMenuOpen(false)}
+                    />
+                    <div className="absolute right-0 mt-2 w-32 bg-white dark:bg-[#111] border border-black/10 dark:border-white/10 rounded-md shadow-lg overflow-hidden z-50">
+                      {availableLangs.map((lang) => (
+                        <button
+                          key={lang.code}
+                          onClick={() => handleLangChange(lang.code)}
+                          className="w-full text-left px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-black/5 dark:hover:bg-white/5 transition-colors"
+                        >
+                          {lang.name}
+                        </button>
+                      ))}
+                    </div>
+                  </>
+                )}
+              </div>
+
               <Link
                 href="https://github.com"
                 target="_blank"
@@ -220,10 +304,43 @@ export function Header({ navItems = [] }: HeaderProps) {
                 <X className="h-5 w-5" />
               </button>
             </form>
-            <div className="p-4">
-              <p className="text-sm text-center text-gray-500">
-                Type a search query and press Enter to search.
-              </p>
+            <div className="p-4 max-h-[60vh] overflow-y-auto">
+              {isSearching ? (
+                <div className="flex justify-center py-8">
+                  <div className="h-6 w-6 animate-spin rounded-full border-2 border-accent border-t-transparent" />
+                </div>
+              ) : searchResults.length > 0 ? (
+                <div className="flex flex-col gap-2">
+                  {searchResults.map((result) => (
+                    <Link
+                      key={result.slug}
+                      href={`/docs/${result.slug}`}
+                      onClick={() => {
+                        setIsSearchOpen(false);
+                        setSearchQuery("");
+                      }}
+                      className="flex flex-col gap-1 rounded-lg p-3 hover:bg-black/5 dark:hover:bg-white/5 transition-colors"
+                    >
+                      <span className="font-medium text-black dark:text-white">
+                        {result.title}
+                      </span>
+                      {result.description && (
+                        <span className="text-sm text-gray-500 dark:text-gray-400 line-clamp-1">
+                          {result.description}
+                        </span>
+                      )}
+                    </Link>
+                  ))}
+                </div>
+              ) : searchQuery.trim() ? (
+                <p className="text-sm text-center text-gray-500 py-8">
+                  No results found for "{searchQuery}"
+                </p>
+              ) : (
+                <p className="text-sm text-center text-gray-500 py-8">
+                  Type a search query to find documentation.
+                </p>
+              )}
             </div>
           </div>
         </div>

@@ -34,7 +34,7 @@ export default function RootLayout({
       className={`${inter.variable} ${spaceGrotesk.variable} ${jetbrainsMono.variable} dark`}
     >
       <body
-        className="bg-background text-foreground min-h-screen flex flex-col antialiased"
+        className="bg-white dark:bg-[#0a0a0a] text-black dark:text-white min-h-screen flex flex-col antialiased"
         suppressHydrationWarning
       >
         {children}

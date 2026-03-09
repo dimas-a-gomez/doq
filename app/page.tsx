@@ -1,11 +1,16 @@
 import Link from "next/link";
 import { Header } from "@/components/Header";
 import { ArrowRight, Book, Code, Zap } from "lucide-react";
+import { getNavStructure } from "@/lib/mdx";
+import { Suspense } from "react";
 
 export default function Home() {
+  const navItems = getNavStructure();
   return (
-    <div className="flex min-h-screen flex-col bg-background">
-      <Header />
+    <div className="flex min-h-screen flex-col bg-white dark:bg-[#0a0a0a]">
+      <Suspense fallback={<div className="h-14 w-full border-b border-black/10 dark:border-white/10 bg-white dark:bg-[#0a0a0a]" />}>
+        <Header navItems={navItems} />
+      </Suspense>
       <main className="flex-1">
         <section className="space-y-6 pb-8 pt-16 md:pb-12 md:pt-24 lg:py-32">
           <div className="container mx-auto flex max-w-[64rem] flex-col items-center gap-4 text-center px-4">
