@@ -1,7 +1,7 @@
 {
-  "index": {
-    "title": "Inicio",
-    "icon": "Home"
+  "instalacion": {
+    "title": "Instalar",
+    "icon": "download"
   },
   "components": {
     "title": "Componentes",
