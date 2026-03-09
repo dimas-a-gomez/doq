@@ -1,0 +1,35 @@
+---
+title: "Aviso de Cookies"
+description: "Configura el banner de consentimiento de cookies al final de tu sitio."
+order: 8
+---
+
+El **Aviso de Cookies** es un componente esencial para informar a tus usuarios sobre el uso de datos, presentado con un diseño elegante que aparece en la parte inferior de la pantalla.
+
+---
+
+## 1. Activación del Widget
+
+Al igual que otros componentes avanzados, este widget se encuentra desactivado por defecto:
+
+* Dirígete a la sección **Diseño** en tu panel de Blogger.
+* Busca el gadget de tipo **HTML/JavaScript** llamado **"Aviso de Cookies"**, ubicado al final de la lista.
+* Activa el interruptor **"Mostrar este widget"**.
+
+---
+
+## 2. Configuración del Contenido
+
+Para que el aviso funcione y se vea correctamente, debes utilizar la estructura HTML específica de la plantilla.
+
+### Código Base:
+
+```html
+<div id="cookie-notice-container">
+    <h3 class="cookie-title">Aviso de Cookies</h3>
+    <p class="cookie-desc">Las galletas son más crujientes y deliciosas cuando las disfrutas.</p>
+    <div class="cookie-buttons">
+    <button id="accept-cookies" class="cookie-btn btn-accept">Delicioso</button>
+    <a href="#url" class="cookie-btn btn-info">Averiguar</a>
+    </div>
+</div>
