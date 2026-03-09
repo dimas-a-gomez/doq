@@ -1,14 +1,6 @@
 {
-  "index": {
-    "title": "Inicio",
-    "icon": "Home"
-  },
-  "components": {
-    "title": "Componentes",
-    "icon": "Blocks"
-  },
-  "gadgets": {
-    "title": "Gadgets",
-    "icon": "Smartphone"
-  }
+  "instalacion": {
+  "title": "Instalación en PC",
+  "icon": "Download"
+}
 }
