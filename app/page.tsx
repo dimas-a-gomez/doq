@@ -21,19 +21,17 @@ export default function Home() {
               Follow along on GitHub
             </Link>
             <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-black dark:text-white">
-              Build better docs with <span className="text-accent">DOQMEN</span>
+              Documentación de <span className="text-accent">MountainB</span>
             </h1>
             <p className="max-w-[42rem] leading-normal text-gray-600 dark:text-gray-400 sm:text-xl sm:leading-8">
-              A modern, fast, and beautiful documentation template built with
-              Next.js, Tailwind CSS, and MDX. Designed for the best developer
-              experience.
+              Esta documentación te proporcionará todo lo necesario para instalar, configurar y personalizar tu blog desde cero con MountainB.
             </p>
             <div className="space-x-4 mt-4">
               <Link
                 href="/docs"
                 className="inline-flex items-center justify-center rounded-md bg-accent px-8 py-3 text-sm font-medium text-white shadow transition-colors hover:bg-accent-hover focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-accent"
               >
-                Get Started
+                Empezar v1.2.0
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
               <Link
