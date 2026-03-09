@@ -11,6 +11,10 @@
     "title": "Configurar menú",
     "icon": "menu"
   },
+  "hero": {
+    "title": "Sección Hero",
+    "icon": "layout-template"
+  },
   "gadgets": {
     "title": "Gadgets",
     "icon": "Smartphone"
