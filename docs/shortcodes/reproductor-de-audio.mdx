@@ -1,0 +1,46 @@
+---
+title: "Reproductor de Audio"
+description: "Inserta pistas de audio con un encabezado personalizado para título y autor."
+order: 13
+---
+
+El shortcode de **Reproductor de Audio** facilita la inclusión de archivos sonoros con un diseño que destaca la información de la pista antes de los controles de reproducción.
+<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiTwuDu_n-AzLRfBSr0MH_IZSEAp3i6t-OkEDukF-vC3ZqgC1Q2seVifj2QXV1okQcODYeGouC3Jhihg1qHWH-G3eJBh0xKWM8e4zX6DEWpAIZdJiz_Wdkwp0V38YjUoqelvjlgZNwQeUKcRwIyE5IDSWy-VM2qqNq8PVIuzT4ft5KuaKbuPG_UtSgKcRg/s1600/Screenshot%202026-03-09%20at%2016-25-27%20Shortcodes%20v2.0%20de%20MountainB%20v1.2.0.png" alt="Descripción" width="100%" />
+
+---
+
+## 1. Código del Shortcode
+
+Copia el siguiente bloque HTML y pégalo en la pestaña **"Vista de HTML"** de tu editor en Blogger:
+
+```html
+<div class="mt-audio-player">
+    <div class="mt-audio-header">
+        <div class="mt-audio-icon">
+            <svg class="i i-music-note" viewBox="0 0 24 24">
+                <path d="M12 8h6V3h-6v15"></path>
+                <circle cx="8" cy="18" r="4"></circle>
+            </svg>
+        </div>
+        <div class="mt-audio-info">
+            <span class="mt-audio-title">#TITULO_DEL_AUDIO</span>
+            <span class="mt-audio-subtitle">| #AUTOR - #DURACION</span>
+        </div>
+    </div>
+
+    <audio controls>
+        <source src="#URL_DEL_AUDIO.mp3" type="audio/mpeg">
+        Tu navegador no soporta el elemento de audio.
+    </audio>
+</div>
+```
+
+---
+
+## 2. Instrucciones de Personalización
+Para configurar el reproductor, actualiza los siguientes valores:
+
+- **#TITULO_DEL_AUDIO:** El nombre de la canción, episodio o pista.
+- **#AUTOR:** El nombre del artista, locutor o creador del contenido.
+- **#DURACION:** El tiempo estimado de la pista (ejemplo: 3:45).
+- **#URL_DEL_AUDIO.mp3:** El enlace directo al archivo de audio hospedado en un servidor externo.
