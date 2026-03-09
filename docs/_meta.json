@@ -8,8 +8,8 @@
     "icon": "download"
   },
   "configuracion-menu": {
-  "title": "Configurar menú",
-  "icon": "menu"
+    "title": "Configurar menú",
+    "icon": "menu"
   },
   "gadgets": {
     "title": "Gadgets",
