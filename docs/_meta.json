@@ -27,6 +27,10 @@
     "title": "Redes Sociales",
     "icon": "Share2"
   },
+  "aviso-cookies": {
+    "title": "Aviso de Cookies",
+    "icon": "Cookie"
+  },
   "gadgets": {
     "title": "Gadgets",
     "icon": "Smartphone"
