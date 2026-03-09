@@ -3,14 +3,22 @@
 import Link from "next/link";
 import { Search, Moon, Sun, Menu, Github, X } from "lucide-react";
 import { useState, useEffect, useRef } from "react";
-import { useRouter } from "next/navigation";
+import { useRouter, usePathname } from "next/navigation";
+import type { NavItem } from "@/lib/mdx";
+import { NavGroup } from "./Navigation";
 
-export function Header() {
+interface HeaderProps {
+  navItems?: NavItem[];
+}
+
+export function Header({ navItems = [] }: HeaderProps) {
   const [isDark, setIsDark] = useState(true);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const searchInputRef = useRef<HTMLInputElement>(null);
   const router = useRouter();
+  const pathname = usePathname();
 
   useEffect(() => {
     // Check local storage or system preference on mount
@@ -55,11 +63,21 @@ export function Header() {
     }
   }, [isSearchOpen]);
 
+  // Prevent scrolling when mobile menu is open
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+    return () => {
+      document.body.style.overflow = "unset";
+    };
+  }, [isMobileMenuOpen]);
+
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
     if (searchQuery.trim()) {
-      // For now, just navigate to the docs page. In a real app, you'd have a search results page
-      // or filter the sidebar.
       router.push(`/docs`);
       setIsSearchOpen(false);
       setSearchQuery("");
@@ -71,8 +89,12 @@ export function Header() {
       <header className="sticky top-0 z-50 w-full border-b border-black/10 dark:border-white/10 bg-white dark:bg-[#0a0a0a]">
         <div className="container mx-auto flex h-14 max-w-screen-2xl items-center px-4 md:px-8">
           <div className="flex items-center gap-4">
-            <button className="md:hidden text-gray-500 dark:text-gray-400 hover:text-black dark:hover:text-white">
+            <button 
+              onClick={() => setIsMobileMenuOpen(true)}
+              className="md:hidden p-2 -ml-2 text-gray-500 dark:text-gray-400 hover:text-black dark:hover:text-white"
+            >
               <Menu className="h-5 w-5" />
+              <span className="sr-only">Open menu</span>
             </button>
             <Link href="/" className="flex items-center gap-2">
               <div className="h-6 w-6 rounded-md bg-accent flex items-center justify-center">
@@ -121,6 +143,53 @@ export function Header() {
           </div>
         </div>
       </header>
+
+      {/* Mobile Menu Overlay */}
+      {isMobileMenuOpen && (
+        <div className="fixed inset-0 z-[100] md:hidden">
+          <div 
+            className="fixed inset-0 bg-black/50 backdrop-blur-sm"
+            onClick={() => setIsMobileMenuOpen(false)}
+          />
+          <div className="fixed inset-y-0 left-0 w-4/5 max-w-sm bg-white dark:bg-[#0a0a0a] shadow-2xl flex flex-col">
+            <div className="flex items-center justify-between p-4 border-b border-black/10 dark:border-white/10">
+              <Link href="/" className="flex items-center gap-2" onClick={() => setIsMobileMenuOpen(false)}>
+                <div className="h-6 w-6 rounded-md bg-accent flex items-center justify-center">
+                  <span className="text-white font-bold text-xs">D</span>
+                </div>
+                <span className="font-display font-bold text-lg text-black dark:text-white">
+                  DOQMEN
+                </span>
+              </Link>
+              <button 
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="p-2 text-gray-500 hover:text-black dark:hover:text-white rounded-md"
+              >
+                <X className="h-5 w-5" />
+                <span className="sr-only">Close menu</span>
+              </button>
+            </div>
+            <div className="flex-1 overflow-y-auto p-4">
+              {navItems.length > 0 ? (
+                <div className="w-full">
+                  {navItems.map((item) => (
+                    <NavGroup 
+                      key={item.slug} 
+                      item={item} 
+                      pathname={pathname} 
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    />
+                  ))}
+                </div>
+              ) : (
+                <div className="text-sm text-gray-500 py-4">
+                  Navigation is not available here.
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* Search Modal */}
       {isSearchOpen && (

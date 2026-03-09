@@ -1,0 +1,14 @@
+{
+  "index": {
+    "title": "Inicio",
+    "icon": "Home"
+  },
+  "components": {
+    "title": "Componentes",
+    "icon": "Blocks"
+  },
+  "gadgets": {
+    "title": "Gadgets",
+    "icon": "Smartphone"
+  }
+}
