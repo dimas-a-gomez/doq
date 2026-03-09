@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Space_Grotesk, JetBrains_Mono } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 
 const inter = Inter({
@@ -37,6 +38,21 @@ export default function RootLayout({
         className="bg-white dark:bg-[#0a0a0a] text-black dark:text-white min-h-screen flex flex-col antialiased"
         suppressHydrationWarning
       >
+        <div id="google_translate_element" style={{ display: "none" }}></div>
+        <Script
+          src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+          strategy="afterInteractive"
+        />
+        <Script id="google-translate-init" strategy="afterInteractive">
+          {`
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                autoDisplay: false
+              }, 'google_translate_element');
+            }
+          `}
+        </Script>
         {children}
       </body>
     </html>

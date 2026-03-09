@@ -171,3 +171,21 @@ figure[data-rehype-pretty-code-figure] [data-highlighted-line] {
   background-color: rgba(255, 255, 255, 0.1);
   border-left: 2px solid var(--color-accent);
 }
+
+/* Hide Google Translate UI */
+.skiptranslate iframe {
+  display: none !important;
+}
+body {
+  top: 0 !important;
+}
+#goog-gt-tt {
+  display: none !important;
+}
+.goog-te-balloon-frame {
+  display: none !important;
+}
+.goog-text-highlight {
+  background-color: transparent !important;
+  box-shadow: none !important;
+}

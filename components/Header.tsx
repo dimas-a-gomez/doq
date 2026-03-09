@@ -20,7 +20,7 @@ export function Header({ navItems = [] }: HeaderProps) {
   const [isSearching, setIsSearching] = useState(false);
   
   const searchParams = useSearchParams();
-  const [currentLang, setCurrentLang] = useState("ES");
+  const [currentLang, setCurrentLang] = useState("EN");
   const [isLangMenuOpen, setIsLangMenuOpen] = useState(false);
 
   const searchInputRef = useRef<HTMLInputElement>(null);
@@ -36,9 +36,19 @@ export function Header({ navItems = [] }: HeaderProps) {
   const availableLangs = languages.filter((l) => l.code !== currentLang);
 
   useEffect(() => {
-    const langParam = searchParams.get("lang");
-    if (langParam && ["ES", "EN", "PT"].includes(langParam.toUpperCase())) {
-      setCurrentLang(langParam.toUpperCase());
+    // Check cookie for current language
+    const match = document.cookie.match(/googtrans=\/en\/([a-z]{2})/);
+    if (match && match[1]) {
+      const code = match[1].toUpperCase();
+      if (["ES", "EN", "PT"].includes(code)) {
+        setCurrentLang(code);
+      }
+    } else {
+      // Check URL param as fallback
+      const langParam = searchParams.get("lang");
+      if (langParam && ["ES", "EN", "PT"].includes(langParam.toUpperCase())) {
+        setCurrentLang(langParam.toUpperCase());
+      }
     }
   }, [searchParams]);
 
@@ -132,10 +142,24 @@ export function Header({ navItems = [] }: HeaderProps) {
     setCurrentLang(code);
     setIsLangMenuOpen(false);
     
+    const targetLang = code.toLowerCase();
+    
+    // Set Google Translate cookie
+    if (targetLang === 'en') {
+      // Clear the cookie to revert to original
+      document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+      document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; domain=" + window.location.hostname + "; path=/;";
+    } else {
+      document.cookie = `googtrans=/en/${targetLang}; path=/`;
+      document.cookie = `googtrans=/en/${targetLang}; domain=${window.location.hostname}; path=/`;
+    }
+
     // Update URL with new language
     const currentParams = new URLSearchParams(Array.from(searchParams.entries()));
-    currentParams.set("lang", code.toLowerCase());
-    router.push(`${pathname}?${currentParams.toString()}`);
+    currentParams.set("lang", targetLang);
+    
+    // Force reload to apply translation
+    window.location.href = `${pathname}?${currentParams.toString()}`;
   };
 
   return (
