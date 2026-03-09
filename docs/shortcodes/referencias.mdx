@@ -1,0 +1,42 @@
+---
+title: "Sección de Referencias"
+description: "Enumera fuentes, créditos y enlaces externos de forma organizada."
+order: 12
+---
+
+El shortcode de **Referencias** genera un bloque estructurado con iconos para listar fuentes de información o dar créditos a terceros.
+<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgpv7obWXpCfhYfyj0CgpDkewVOVQXVZlNjws1rcsjfn8UPQAIXnDWzCTLNkDYbXL74g48R1pJbkB-iMZ3yasZ0JK_UBbfzwXUETwIhtqemApPJxOR4SPIat9npy5jq4ZYam3RLNGaMsnH_61UeVcA2GMCSXEQt5LRhaSwnltsny5EitGzoXZWhy9CjNXM/s1600/Screenshot%202026-03-09%20at%2016-20-09%20Shortcodes%20v2.0%20de%20MountainB%20v1.2.0.png" alt="Descripción" width="100%" />
+
+---
+
+## 1. Código del Shortcode
+
+Copia el siguiente bloque HTML y pégalo al final de tu contenido en la **"Vista de HTML"** de Blogger:
+
+```html
+<div class="mt-references">
+    <div class="mt-ref-title">
+        <i class='mt-link'></i> #FUENTES_Y_REFERENCIAS
+    </div>
+    <ul class="mt-ref-list">
+        <li class="mt-ref-item">
+            <i class='mt-chevron-right'></i> 
+            #CREDITOS: <a href="#URL_FUENTE" target="_blank">#FUENTE</a>
+        </li>
+        <li class="mt-ref-item">
+            <i class='mt-chevron-right'></i> 
+            #CREDITOS: <a href="#URL_FUENTE" target="_blank">#FUENTE</a>
+        </li>
+    </ul>
+</div>
+```
+
+---
+
+## 2. Instrucciones de Personalización
+Para que el listado sea funcional, actualiza los siguientes campos por cada elemento:
+
+- **#FUENTES_Y_REFERENCIAS:** Es el título del bloque (ejemplo: **"Fuentes consultadas"** o **"Créditos"**).
+- **#CREDITOS:** Define el tipo de referencia (ejemplo: **"Imagen"**, **"Información"**, **"Inspiración"**).
+- **#URL_FUENTE:** El enlace directo hacia el sitio web de la fuente.
+- **#FUENTE:** El nombre del sitio o autor de la referencia que será visible.
