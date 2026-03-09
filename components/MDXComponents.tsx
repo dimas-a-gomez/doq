@@ -39,7 +39,7 @@ const Alert = ({ type = "info", title, children }: AlertProps) => {
 
   return (
     <div
-      className={`my-6 flex gap-3 rounded-lg border p-4 backdrop-blur-sm ${style.bg} ${style.border}`}
+      className={`my-6 flex gap-3 rounded-lg border p-4 ${style.bg} ${style.border}`}
     >
       <div className="mt-0.5 shrink-0">{style.icon}</div>
       <div className={`prose-sm ${style.text}`}>

@@ -42,14 +42,16 @@ export default async function DocPage({
     <div className="xl:grid xl:grid-cols-[1fr_250px] xl:gap-10">
       <div className="mx-auto w-full min-w-0">
         <div className="mb-8">
-          <h1 className="font-display text-4xl font-bold tracking-tight text-white mb-2">
+          <h1 className="font-display text-4xl font-bold tracking-tight text-black dark:text-white mb-2">
             {doc.meta.title}
           </h1>
           {doc.meta.description && (
-            <p className="text-xl text-gray-400">{doc.meta.description}</p>
+            <p className="text-xl text-gray-600 dark:text-gray-400">
+              {doc.meta.description}
+            </p>
           )}
         </div>
-        <div className="prose prose-invert max-w-none">
+        <div className="prose dark:prose-invert max-w-none">
           <MDXRemote
             source={doc.content}
             components={components}

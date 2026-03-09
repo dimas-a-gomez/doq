@@ -18,7 +18,7 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Hudocs - Modern Documentation",
+  title: "DOQMEN - Modern Documentation",
   description:
     "A modern technical documentation website built with Next.js and Tailwind CSS.",
 };
