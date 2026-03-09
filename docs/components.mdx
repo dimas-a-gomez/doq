@@ -1,61 +1,45 @@
 ---
-title: "Components"
-description: "Explore the custom MDX components available in DOQMEN."
+title: "Instalación en PC"
+description: "Guía paso a paso para configurar la plantilla MountainB en tu computadora."
 order: 2
 ---
 
-# Components
+Instalar la plantilla **MountainB** en tu ordenador es un proceso sencillo que te permitirá tener el control total sobre el diseño y la estructura de tu sitio en Blogger.
 
-DOQMEN comes with a few built-in components that you can use directly in your MDX files.
+---
 
-## Alerts
+## Requisitos Previos
 
-Alerts are useful for highlighting important information, warnings, or success messages.
+Antes de comenzar, asegúrate de tener lo siguiente:
 
-### Info Alert
+* El archivo comprimido (.zip) de la plantilla.
+* Un navegador web actualizado (Chrome, Edge o Firefox).
+* Acceso a tu panel de administración de **Google Blogger**.
 
-<Alert type="info" title="Did you know?">
-  You can use MDX to embed React components directly into your Markdown files.
-</Alert>
+---
 
-```mdx
-<Alert type="info" title="Did you know?">
-  You can use MDX to embed React components directly into your Markdown files.
-</Alert>
-```
+## Pasos para la Instalación
 
-### Warning Alert
+Sigue estas instrucciones cuidadosamente para evitar errores en la carga de los widgets:
 
-<Alert type="warning" title="Warning">
-  This feature is currently in beta and may change in the future.
-</Alert>
+### 1. Preparar el archivo XML
+Extrae el contenido del archivo .zip descargado. Localiza el archivo con extensión `.xml`, el cual contiene todo el código de la plantilla.
 
-```mdx
-<Alert type="warning" title="Warning">
-  This feature is currently in beta and may change in the future.
-</Alert>
-```
+### 2. Acceder al Tema en Blogger
+En el panel izquierdo de tu blog, dirígete a la sección **"Tema"**. Haz clic en la flecha junto al botón "Personalizar" y selecciona **"Restaurar"**.
 
-### Success Alert
+### 3. Subir la Plantilla
+Haz clic en **"Subir"** y selecciona el archivo `.xml` que extrajiste en el paso 1. Espera a que aparezca el mensaje de "Tema restaurado".
 
-<Alert type="success" title="Success">
-  Your changes have been saved successfully.
-</Alert>
+---
 
-```mdx
-<Alert type="success" title="Success">
-  Your changes have been saved successfully.
-</Alert>
-```
+## Recomendaciones de Edición
 
-### Error Alert
+Para modificar el código de forma segura en tu PC, te recomendamos usar:
 
-<Alert type="error" title="Error">
-  An unexpected error occurred while processing your request.
-</Alert>
+1.  **Visual Studio Code**: El mejor editor para manejar etiquetas XML y CSS.
+2.  **Vista Previa**: Siempre utiliza el botón de vista previa en Blogger antes de guardar cambios definitivos.
 
-```mdx
-<Alert type="error" title="Error">
-  An unexpected error occurred while processing your request.
-</Alert>
-```
+---
+
+> **Nota:** Si encuentras problemas con la carga de los iconos, asegúrate de que el paquete **Meteor** de Zkreations esté correctamente vinculado en el `<head>` de tu código.
