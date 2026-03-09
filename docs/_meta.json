@@ -1,11 +1,35 @@
 {
   "index": {
-    "title": "Inicio",
+    "title": "Introducción",
     "icon": "Home"
   },
-  "components": {
-    "title": "Componentes",
-    "icon": "Blocks"
+  "instalacion": {
+    "title": "Instalar",
+    "icon": "Download"
+  },
+  "configuracion-menu": {
+    "title": "Configurar menú",
+    "icon": "Menu"
+  },
+  "hero": {
+    "title": "Sección Hero",
+    "icon": "LayoutTemplate"
+  },
+  "enlaces-legales": {
+    "title": "Añadir Enl. Legales",
+    "icon": "Scale"
+  },
+  "marca-slogan": {
+    "title": "Marca y Slogan",
+    "icon": "BadgeCheck"
+  },
+  "redes-sociales": {
+    "title": "Redes Sociales",
+    "icon": "Share2"
+  },
+  "aviso-cookies": {
+    "title": "Aviso de Cookies",
+    "icon": "Cookie"
   },
   "gadgets": {
     "title": "Gadgets",
