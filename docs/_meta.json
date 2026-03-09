@@ -7,6 +7,10 @@
     "title": "Instalar",
     "icon": "download"
   },
+  "configuracion-menu": {
+  "title": "Configurar menú",
+  "icon": "menu"
+  },
   "gadgets": {
     "title": "Gadgets",
     "icon": "Smartphone"
