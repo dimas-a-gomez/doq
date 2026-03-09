@@ -3,9 +3,9 @@
     "title": "Introducción",
     "icon": "Home"
   },
-  "components": {
-    "title": "Componentes",
-    "icon": "Blocks"
+  "instalacion": {
+    "title": "Instalar",
+    "icon": "download"
   },
   "gadgets": {
     "title": "Gadgets",
