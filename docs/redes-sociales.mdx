@@ -1,0 +1,40 @@
+---
+title: "Redes Sociales"
+description: "Vincula tus perfiles externos con iconos modernos en el pie de página."
+order: 7
+---
+
+El widget de **Redes Sociales** te permite añadir iconos interactivos en el footer que dirijan a tus usuarios a tus plataformas favoritas.
+
+---
+
+## 1. Activación del Widget
+
+Esta sección utiliza un componente de tipo **HTML/JavaScript**:
+
+* Entra al panel de **Diseño** en Blogger.
+* Localiza el widget titulado **"Redes Sociales"** en la zona del footer.
+* Activa el interruptor **"Mostrar este widget"**.
+
+---
+
+## 2. Obtención de Iconos (Meteor Icons)
+
+Para que los iconos se vean profesionales y consistentes, debes obtenerlos de la biblioteca oficial:
+
+1. Visita el sitio web de **[Meteor Icons](https://meteoricons.com/)**.
+2. Busca la red social que necesitas (ejemplo: Instagram, Facebook, YouTube).
+3. **Copia el código SVG**:
+   * **En PC**: Pasa el cursor sobre el icono y haz clic en el botón de copiar.
+   * **En Móvil**: Presiona directamente sobre el icono para copiar el código al portapapeles.
+
+---
+
+## 3. Configuración del Contenido
+
+Pega la estructura base en el campo **"Contenido"** del widget y reemplaza el bloque `<svg>...</svg>` por el que copiaste anteriormente:
+
+```html
+<a href='#url' aria-label='#rrss-nombre' class='social-icon'>
+    <svg>...</svg>
+</a>
