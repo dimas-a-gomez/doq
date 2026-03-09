@@ -10,7 +10,7 @@ export default function Home() {
         <section className="space-y-6 pb-8 pt-16 md:pb-12 md:pt-24 lg:py-32">
           <div className="container mx-auto flex max-w-[64rem] flex-col items-center gap-4 text-center px-4">
             <Link
-              href="tree/main/docs"
+              href="/docs"
               className="rounded-2xl bg-black/5 dark:bg-white/5 px-4 py-1.5 text-sm font-medium text-accent border border-black/10 dark:border-white/10 hover:bg-black/10 dark:hover:bg-white/10 transition-colors"
             >
               Follow along on GitHub
