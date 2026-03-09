@@ -23,6 +23,10 @@
     "title": "Marca y Slogan",
     "icon": "BadgeCheck"
   },
+  "redes-sociales": {
+    "title": "Redes Sociales",
+    "icon": "Share2"
+  },
   "gadgets": {
     "title": "Gadgets",
     "icon": "Smartphone"
