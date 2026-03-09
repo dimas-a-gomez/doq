@@ -1,6 +1,6 @@
 {
-  "instalacion": {
-    "title": "Instalar",
+  "index": {
+    "title": "Instalación",
     "icon": "Download"
   },
   "components": {
