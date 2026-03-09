@@ -1,45 +1,41 @@
 ---
-title: "Instalación en PC"
-description: "Guía paso a paso para configurar la plantilla MountainB en tu computadora."
+title: "Instalación"
+description: "Aprende la forma más limpia de instalar MountainB usando el editor de código."
 order: 2
 ---
 
-Instalar la plantilla **MountainB** en tu ordenador es un proceso sencillo que te permitirá tener el control total sobre el diseño y la estructura de tu sitio en Blogger.
+Existen dos formas de instalar la plantilla **MountainB**. Aunque la opción de restaurar es rápida, para usuarios de PC recomendamos el método de **Copiado Total** para evitar conflictos con configuraciones de temas anteriores.
 
 ---
 
-## Requisitos Previos
+## Método Recomendado (PC)
 
-Antes de comenzar, asegúrate de tener lo siguiente:
+Este método asegura una instalación limpia reemplazando todo el código existente.
 
-* El archivo comprimido (.zip) de la plantilla.
-* Un navegador web actualizado (Chrome, Edge o Firefox).
-* Acceso a tu panel de administración de **Google Blogger**.
+### 1. Preparar el código XML
+* Abre el archivo `.xml` de la plantilla en tu PC.
+* Puedes usar el **Bloc de notas** o **Visual Studio Code**.
+* Selecciona todo el texto (`Ctrl + A` o clic derecho y seleccionar todo) y cópialo (`Ctrl + C`).
 
----
+### 2. Limpiar el Editor de Blogger
+* En tu panel de Blogger, ve a **Tema** y haz clic en la flecha junto a "Personalizar".
+* Selecciona **Editar HTML**.
+* Haz clic dentro del código, selecciona todo y **bórralo por completo**.
 
-## Pasos para la Instalación
-
-Sigue estas instrucciones cuidadosamente para evitar errores en la carga de los widgets:
-
-### 1. Preparar el archivo XML
-Extrae el contenido del archivo .zip descargado. Localiza el archivo con extensión `.xml`, el cual contiene todo el código de la plantilla.
-
-### 2. Acceder al Tema en Blogger
-En el panel izquierdo de tu blog, dirígete a la sección **"Tema"**. Haz clic en la flecha junto al botón "Personalizar" y selecciona **"Restaurar"**.
-
-### 3. Subir la Plantilla
-Haz clic en **"Subir"** y selecciona el archivo `.xml` que extrajiste en el paso 1. Espera a que aparezca el mensaje de "Tema restaurado".
+### 3. Pegar y Guardar
+* Pega el código que copiaste de **MountainB** (`Ctrl + V`).
+* Haz clic en el icono de **Guardar** (el disquete) en la esquina superior derecha.
 
 ---
 
-## Recomendaciones de Edición
+## Método Alternativo (Móviles)
 
-Para modificar el código de forma segura en tu PC, te recomendamos usar:
+Si estás realizando el proceso desde un teléfono inteligente, el método de copiado puede ser difícil de manejar. En ese caso, usa la opción de **Restaurar**:
 
-1.  **Visual Studio Code**: El mejor editor para manejar etiquetas XML y CSS.
-2.  **Vista Previa**: Siempre utiliza el botón de vista previa en Blogger antes de guardar cambios definitivos.
+1.  En la sección **Tema**, haz clic en la flecha junto a "Personalizar".
+2.  Selecciona **Restaurar**.
+3.  Sube el archivo `.xml` directamente desde tus archivos locales.
 
 ---
 
-> **Nota:** Si encuentras problemas con la carga de los iconos, asegúrate de que el paquete **Meteor** de Zkreations esté correctamente vinculado en el `<head>` de tu código.
+> **Consejo Pro:** Si después de instalar ves widgets extraños en el diseño, ve a la sección **Diseño** de Blogger y elimina cualquier elemento que pertenezca a tu plantilla vieja para que la interfaz de **MountainB** luzca impecable.
