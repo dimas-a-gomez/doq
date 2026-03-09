@@ -1,4 +1,8 @@
 {
-  "descargar": "Botón de Descarga",
-  "cita": "Bloque de Cita"
+  "descargar": {
+    "title": "Botón de Descarga"
+  },
+  "cita": {
+    "title": "Bloque de Cita"
+  }
 }
