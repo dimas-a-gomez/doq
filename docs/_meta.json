@@ -15,6 +15,10 @@
     "title": "Sección Hero",
     "icon": "LayoutTemplate"
   },
+  "enlaces-legales": {
+    "title": "Añadir Enl. Legales",
+    "icon": "Scale"
+  },
   "gadgets": {
     "title": "Gadgets",
     "icon": "Smartphone"
