@@ -5,15 +5,15 @@
   },
   "instalacion": {
     "title": "Instalar",
-    "icon": "download"
+    "icon": "Download"
   },
   "configuracion-menu": {
     "title": "Configurar menú",
-    "icon": "menu"
+    "icon": "Menu"
   },
   "hero": {
     "title": "Sección Hero",
-    "icon": "layout-template"
+    "icon": "LayoutTemplate"
   },
   "gadgets": {
     "title": "Gadgets",
