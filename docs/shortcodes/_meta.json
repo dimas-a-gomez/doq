@@ -1,0 +1,17 @@
+{
+  "descargar": { "title": "Botón de Descarga" },
+  "cita": { "title": "Bloque de Cita" },
+  "enlace-externo": { "title": "Enlace Externo" },
+  "nota": { "title": "Nota Informativa" },
+  "letra-capital": { "title": "Letra Capital" },
+  "blogs-recomendados": { "title": "Blogs Recomendados" },
+  "resumen": { "title": "Caja de Resumen" },
+  "conclusion": { "title": "Conclusión" },
+  "preguntas-y-respuestas": { "title": "Preguntas y Respuestas" },
+  "autor": { "title": "Tarjeta de Autor" },
+  "bloque-de-codigo": { "title": "Bloque de Código" },
+  "referencias": { "title": "Sección de Referencias" },
+  "reproductor-de-audio": { "title": "Reproductor de Audio" },
+  "reproductor-youtube": { "title": "YouTube Optimizado" },
+  "reproductor-video": { "title": "Reproductor de Video" }
+}
