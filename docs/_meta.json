@@ -1,34 +1,34 @@
 {
   "index": {
-    "title": "Introducción",
+    "title": "Introduction",
     "icon": "Home"
   },
-  "instalacion": {
-    "title": "Instalar",
+  "installation": {
+    "title": "Installation",
     "icon": "Download"
   },
-  "configuracion-menu": {
-    "title": "Configurar menú",
+  "menu-configuration": {
+    "title": "Menu Configuration",
     "icon": "Menu"
   },
   "hero": {
-    "title": "Sección Hero",
+    "title": "Hero Section",
     "icon": "LayoutTemplate"
   },
-  "enlaces-legales": {
-    "title": "Añadir Enl. Legales",
+  "legal-links": {
+    "title": "Legal Links",
     "icon": "Scale"
   },
-  "marca-slogan": {
-    "title": "Marca y Slogan",
+  "branding-slogan": {
+    "title": "Branding & Slogan",
     "icon": "BadgeCheck"
   },
-  "redes-sociales": {
-    "title": "Redes Sociales",
+  "social-media": {
+    "title": "Social Media",
     "icon": "Share2"
   },
-  "aviso-cookies": {
-    "title": "Aviso de Cookies",
+  "cookie-notice": {
+    "title": "Cookie Notice",
     "icon": "Cookie"
   },
   "shortcodes": {
