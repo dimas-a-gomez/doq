@@ -183,7 +183,7 @@ export function Header({ navItems = [] }: HeaderProps) {
               </span>
             </Link>
             <div className="hidden sm:flex items-center ml-4 px-2 py-0.5 rounded-full bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 text-xs text-gray-500 dark:text-gray-400 font-mono">
-              v1.0.0
+              v1.1.2
             </div>
           </div>
 

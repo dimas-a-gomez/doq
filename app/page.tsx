@@ -7,7 +7,7 @@ import { Suspense } from "react";
 export default function Home() {
   const navItems = getNavStructure();
   return (
-    <div className="flex min-h-screen flex-col bg-white dark:bg-[#0a0a0a]">
+    <div className="flex flex-col bg-white dark:bg-[#0a0a0a] flex-1">
       <Suspense fallback={<div className="h-14 w-full border-b border-black/10 dark:border-white/10 bg-white dark:bg-[#0a0a0a]" />}>
         <Header navItems={navItems} />
       </Suspense>
@@ -21,26 +21,20 @@ export default function Home() {
               Follow along on GitHub
             </Link>
             <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-black dark:text-white">
-              Documentación de <span className="text-accent">MountainB</span>
+              Build better docs with <span className="text-accent">DOQMEN</span>
             </h1>
             <p className="max-w-[42rem] leading-normal text-gray-600 dark:text-gray-400 sm:text-xl sm:leading-8">
-              Esta documentación te proporcionará todo lo necesario para instalar, configurar y personalizar tu blog desde cero con MountainB.
+              A modern, fast, and beautiful documentation template built with
+              Next.js, Tailwind CSS, and MDX. Designed for the best developer
+              experience.
             </p>
-            <div className="space-x-4 mt-4">
+            <div className="mt-4">
               <Link
                 href="/docs"
                 className="inline-flex items-center justify-center rounded-md bg-accent px-8 py-3 text-sm font-medium text-white shadow transition-colors hover:bg-accent-hover focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-accent"
               >
-                Empezar v1.2.0
+                Get Started
                 <ArrowRight className="ml-2 h-4 w-4" />
-              </Link>
-              <Link
-                href="https://github.com"
-                target="_blank"
-                rel="noreferrer"
-                className="inline-flex items-center justify-center rounded-md border border-black/10 dark:border-white/10 bg-transparent px-8 py-3 text-sm font-medium text-black dark:text-white shadow-sm transition-colors hover:bg-black/5 dark:hover:bg-white/5 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-black/20 dark:focus-visible:ring-white/20"
-              >
-                GitHub
               </Link>
             </div>
           </div>

@@ -118,6 +118,14 @@
   padding-left: 1.5rem !important;
 }
 
+.prose ul {
+  list-style-type: disc !important;
+}
+
+.prose ol {
+  list-style-type: decimal !important;
+}
+
 .prose li {
   margin-top: 0.5rem !important;
   margin-bottom: 0.5rem !important;
@@ -130,13 +138,35 @@
 }
 
 .prose a {
+  color: var(--color-accent) !important;
   text-decoration-line: none;
   font-weight: 500;
   transition: color 0.2s ease;
 }
 
 .prose a:hover {
-  color: var(--color-accent-hover);
+  color: var(--color-accent-hover) !important;
+}
+
+/* Inline code styling */
+.prose :not(pre) > code {
+  background-color: #f3f4f6;
+  border: 1px solid #e5e7eb;
+  padding: 0.125rem 0.25rem;
+  border-radius: 0.25rem;
+  font-size: 0.875em;
+  color: #111827;
+}
+
+.prose :not(pre) > code::before,
+.prose :not(pre) > code::after {
+  content: none !important;
+}
+
+.dark .prose :not(pre) > code {
+  background-color: #1f2937;
+  border: 1px solid #374151;
+  color: #f3f4f6;
 }
 
 /* Code block styling from rehype-pretty-code */
