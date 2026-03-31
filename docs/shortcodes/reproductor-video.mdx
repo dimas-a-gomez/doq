@@ -1,0 +1,56 @@
+---
+title: "Reproductor de Video Nativo"
+description: "Reproductor personalizado para archivos MP4 con controles integrados."
+order: 15
+---
+
+El **Reproductor de Video Nativo** permite reproducir archivos de video hospedados en servidores propios o externos, manteniendo la estética de la plantilla con controles personalizados de Play, Progreso y Pantalla Completa.
+<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEguCzmPOHxuPaCIBoZa1Kp4f0iWWxo9ZGCBw8GEV9tgOPlXeZWe-w6ufa8xa8eezvEJ4B4kzedAMkjQdZk8bRyptMUSPteFfb3qgm98YZuBZ2hObJed8kRshKc7NwnY7u1cvENOY8wfFP1_hkt4IVd9GHx6jF2wfmLqRSbnPb-NE9Iqk3pYRQuDBsYCbLw/s1600/Screenshot%202026-03-09%20at%2016-42-26%20Shortcodes%20v2.0%20de%20MountainB%20v1.2.0.png" alt="Descripción" width="100%" />
+
+---
+
+## 1. Código del Shortcode
+
+Copia el siguiente bloque HTML y pégalo en la pestaña **"Vista de HTML"** de tu editor en Blogger:
+
+```html
+<div class="mt-player" id="mountainPlayer">
+    <video 
+        playsinline="true" 
+        webkit-playsinline="true" 
+        preload="auto" 
+        poster="#URL_DE_POSTER.jpg">
+        <source src="#URL_DEL_VIDEO.mp4" type="video/mp4">
+    </video>
+
+    <div class="mt-controls-overlay" id="controlsOverlay">
+        <div class="mt-bottom-bar">
+            <button class="mt-btn" id="playPauseBtn">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z" /></svg>
+            </button>
+
+            <span class="mt-time-text" id="currTime">00:00</span>
+
+            <div class="mt-progress-container" id="progressArea">
+                <div class="mt-progress-current" id="progressBar"></div>
+            </div>
+
+            <span class="mt-time-text" id="totalDuration">00:00</span>
+
+            <button class="mt-btn" id="fullScreenBtn">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3" />
+                </svg>
+            </button>
+        </div>
+    </div>
+</div>
+```
+
+---
+
+## 2. Instrucciones de Personalización
+Para que el video se visualice y reproduzca correctamente, debes actualizar estos dos enlaces:
+
+- **#URL_DE_POSTER.jpg:** Es la imagen de portada que se ve antes de darle a "Play". Asegúrate de que tenga una relación de aspecto similar al video (ejemplo: 16:9).
+- **#URL_DEL_VIDEO.mp4:** El enlace directo al archivo de video. Debe terminar en una extensión compatible como `.mp4` . Ej: `https://storage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4` .

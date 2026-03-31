@@ -1,0 +1,42 @@
+---
+title: "Preguntas y Respuestas"
+description: "Crea un sistema de acordeones para organizar dudas frecuentes."
+order: 9
+---
+
+El shortcode de **Preguntas y Respuestas (FAQ)** permite agrupar contenido en pestañas desplegables, ideal para ahorrar espacio y mejorar la legibilidad.
+<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiYFX4PJ_h3t9LPsmsDRa2zvVIyz3fNaFFDuu1xLBRciVHOrZ2UVtRuw8lGwt_3VzQtO9_F4E6jCvt-76baBcXylXjthmRWSOFDPZ2LJW0hnYLUTqKa9BQkM_-cN7iHPiwdWdI9mGOM7x49nrxORdJ4YQNFJt0CJHHFORHhQKp5jpNsgQnwcqFL_8qCGeo/s1600/Screenshot%202026-03-09%20at%2016-06-31%20Shortcodes%20v2.0%20de%20MountainB%20v1.2.0.png" alt="Descripción" width="100%" />
+
+---
+
+## 1. Código del Shortcode
+
+Copia el siguiente bloque HTML y pégalo en la pestaña **"Vista de HTML"** de tu editor en Blogger:
+
+```html
+<div class="mt-faq-container">
+
+    <details class="mt-faq-item">
+        <summary>#TITULO_PREGUNTA</summary>
+        <div class="mt-faq-content">
+            #RESPUESTA
+        </div>
+    </details>
+
+    <details class="mt-faq-item">
+        <summary>#TITULO_PREGUNTA</summary>
+        <div class="mt-faq-content">
+            #RESPUESTA
+        </div>
+    </details>
+
+</div>
+```
+
+---
+
+## 2. Instrucciones de Personalización
+Para configurar tu sección de preguntas, reemplaza los siguientes valores en cada bloque:
+
+- **#TITULO_PREGUNTA:** Escribe la duda o el título que será visible antes de desplegar el contenido.
+- **#RESPUESTA:** Inserta el texto detallado que se mostrará cuando el usuario haga clic en la pregunta.
