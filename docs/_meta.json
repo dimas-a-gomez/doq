@@ -1,0 +1,38 @@
+{
+  "index": {
+    "title": "Introduction",
+    "icon": "Home"
+  },
+  "installation": {
+    "title": "Installation",
+    "icon": "Download"
+  },
+  "menu-configuration": {
+    "title": "Menu Configuration",
+    "icon": "Menu"
+  },
+  "hero": {
+    "title": "Hero Section",
+    "icon": "LayoutTemplate"
+  },
+  "legal-links": {
+    "title": "Legal Links",
+    "icon": "Scale"
+  },
+  "branding-slogan": {
+    "title": "Branding & Slogan",
+    "icon": "BadgeCheck"
+  },
+  "social-media": {
+    "title": "Social Media",
+    "icon": "Share2"
+  },
+  "cookie-notice": {
+    "title": "Cookie Notice",
+    "icon": "Cookie"
+  },
+  "shortcodes": {
+    "title": "Shortcodes",
+    "icon": "CodeXml"
+  }
+}
