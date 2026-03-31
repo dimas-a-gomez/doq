@@ -1,22 +1,18 @@
 import type { Metadata } from "next";
-import { Inter, Space_Grotesk, JetBrains_Mono } from "next/font/google";
+import { Space_Grotesk, Space_Mono } from "next/font/google";
 import Script from "next/script";
 import { Footer } from "@/components/Footer";
 import "./globals.css";
-
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-sans",
-});
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
   variable: "--font-display",
 });
 
-const jetbrainsMono = JetBrains_Mono({
+const spaceMono = Space_Mono({
+  weight: ["400", "700"],
   subsets: ["latin"],
-  variable: "--font-mono",
+  variable: "--font-space-mono",
 });
 
 export const metadata: Metadata = {
@@ -33,7 +29,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${spaceGrotesk.variable} ${jetbrainsMono.variable} dark`}
+      className={`${spaceGrotesk.variable} ${spaceMono.variable} dark`}
     >
       <body
         className="bg-white dark:bg-[#0a0a0a] text-black dark:text-white min-h-screen flex flex-col antialiased"

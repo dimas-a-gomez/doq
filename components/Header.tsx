@@ -358,7 +358,7 @@ export function Header({ navItems = [] }: HeaderProps) {
                 </div>
               ) : searchQuery.trim() ? (
                 <p className="text-sm text-center text-gray-500 py-8">
-                  No results found for "{searchQuery}"
+                  No results found for &quot;{searchQuery}&quot;
                 </p>
               ) : (
                 <p className="text-sm text-center text-gray-500 py-8">

@@ -1,9 +1,11 @@
 @import "tailwindcss";
 @import "tw-animate-css";
+@import url('https://fonts.googleapis.com/css2?family=Vend+Sans:ital,wght@0,300..700;1,300..700&display=swap');
 
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
+  --font-mono: var(--font-space-mono);
   --color-background: #0a0a0a;
   --color-foreground: #ededed;
   --color-accent: #1684ff;
@@ -15,6 +17,7 @@
 
 @layer base {
   :root {
+    --font-sans: "Vend Sans", sans-serif;
     --background: #ffffff;
     --foreground: #0a0a0a;
   }
@@ -156,6 +159,7 @@
   border-radius: 0.25rem;
   font-size: 0.875em;
   color: #111827;
+  font-family: var(--font-mono);
 }
 
 .prose :not(pre) > code::before,

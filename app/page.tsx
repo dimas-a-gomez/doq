@@ -21,17 +21,19 @@ export default function Home() {
               Follow along on GitHub
             </Link>
             <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-black dark:text-white">
-              Official MountainB <span className="text-accent">Documentation</span>
+              Build better docs with <span className="text-accent">DOQMEN</span>
             </h1>
             <p className="max-w-[42rem] leading-normal text-gray-600 dark:text-gray-400 sm:text-xl sm:leading-8">
-              Official documentation for the MountainB Blogger template. Find essential sections and shortcodes to give your site a better style.
+              A modern, fast, and beautiful documentation template built with
+              Next.js, Tailwind CSS, and MDX. Designed for the best developer
+              experience.
             </p>
             <div className="mt-4">
               <Link
                 href="/docs"
                 className="inline-flex items-center justify-center rounded-md bg-accent px-8 py-3 text-sm font-medium text-white shadow transition-colors hover:bg-accent-hover focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-accent"
               >
-                Get Started v1.2.1
+                Get Started
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </div>
@@ -45,10 +47,11 @@ export default function Home() {
                 <Book className="h-10 w-10 text-accent" />
                 <div className="space-y-2">
                   <h3 className="font-bold text-black dark:text-white">
-                    Modern Interface
+                    MDX Support
                   </h3>
                   <p className="text-sm text-gray-600 dark:text-gray-400">
-                    A visual system focused on usability that provides smooth navigation on any device, maintaining a minimalist and professional aesthetic.
+                    Write your content in Markdown and embed React components
+                    seamlessly.
                   </p>
                 </div>
               </div>
@@ -58,10 +61,11 @@ export default function Home() {
                 <Code className="h-10 w-10 text-accent" />
                 <div className="space-y-2">
                   <h3 className="font-bold text-black dark:text-white">
-                    Shortcodes
+                    Syntax Highlighting
                   </h3>
                   <p className="text-sm text-gray-600 dark:text-gray-400">
-                    A comprehensive library of custom components, such as syntax-highlighted code blocks and dynamic alerts, designed to enhance the reading experience.
+                    Beautiful code blocks powered by rehype-pretty-code and
+                    Shiki.
                   </p>
                 </div>
               </div>
@@ -71,10 +75,10 @@ export default function Home() {
                 <Zap className="h-10 w-10 text-accent" />
                 <div className="space-y-2">
                   <h3 className="font-bold text-black dark:text-white">
-                    Efficient Structure
+                    Fast & Accessible
                   </h3>
                   <p className="text-sm text-gray-600 dark:text-gray-400">
-                    Optimized code based on the Hamlet architecture to ensure strong SEO from the very beginning.
+                    Built on Next.js App Router for maximum performance and SEO.
                   </p>
                 </div>
               </div>
