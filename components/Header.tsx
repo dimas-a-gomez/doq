@@ -6,6 +6,8 @@ import { useState, useEffect, useRef } from "react";
 import { useRouter, usePathname, useSearchParams } from "next/navigation";
 import type { NavItem } from "@/lib/mdx";
 import { NavGroup } from "./Navigation";
+import { siteConfig } from "@/config/site";
+import { Logo } from "./Logo";
 
 interface HeaderProps {
   navItems?: NavItem[];
@@ -175,15 +177,13 @@ export function Header({ navItems = [] }: HeaderProps) {
               <span className="sr-only">Open menu</span>
             </button>
             <Link href="/" className="flex items-center gap-2">
-              <div className="h-6 w-6 rounded-md bg-accent flex items-center justify-center">
-                <span className="text-white font-bold text-xs">D</span>
-              </div>
+              <Logo className="h-6 w-6 text-accent" />
               <span className="font-display font-bold text-lg hidden sm:inline-block text-black dark:text-white">
-                DOQMEN
+                {siteConfig.name}
               </span>
             </Link>
             <div className="hidden sm:flex items-center ml-4 px-2 py-0.5 rounded-full bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 text-xs text-gray-500 dark:text-gray-400 font-mono">
-              v1.1.2
+              v1.1.6
             </div>
           </div>
 
@@ -262,11 +262,9 @@ export function Header({ navItems = [] }: HeaderProps) {
           <div className="fixed inset-y-0 left-0 w-4/5 max-w-sm bg-white dark:bg-[#0a0a0a] shadow-2xl flex flex-col">
             <div className="flex items-center justify-between p-4 border-b border-black/10 dark:border-white/10">
               <Link href="/" className="flex items-center gap-2" onClick={() => setIsMobileMenuOpen(false)}>
-                <div className="h-6 w-6 rounded-md bg-accent flex items-center justify-center">
-                  <span className="text-white font-bold text-xs">D</span>
-                </div>
+                <Logo className="h-6 w-6 text-accent" />
                 <span className="font-display font-bold text-lg text-black dark:text-white">
-                  DOQMEN
+                  {siteConfig.name}
                 </span>
               </Link>
               <button 

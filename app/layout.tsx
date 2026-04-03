@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Space_Grotesk, Space_Mono } from "next/font/google";
 import Script from "next/script";
 import { Footer } from "@/components/Footer";
+import { siteConfig } from "@/config/site";
 import "./globals.css";
 
 const spaceGrotesk = Space_Grotesk({
@@ -16,9 +17,8 @@ const spaceMono = Space_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "DOQMEN - Modern Documentation",
-  description:
-    "A modern technical documentation website built with Next.js and Tailwind CSS.",
+  title: `${siteConfig.name} - Modern Documentation`,
+  description: siteConfig.description,
 };
 
 export default function RootLayout({

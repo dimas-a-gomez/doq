@@ -8,8 +8,9 @@
   --font-mono: var(--font-space-mono);
   --color-background: #0a0a0a;
   --color-foreground: #ededed;
-  --color-accent: #1684ff;
-  --color-accent-hover: #006be6;
+  --color-accent: var(--color-accent);
+  --color-accent-hover: var(--color-accent-hover);
+  --color-accent-fg: var(--color-accent-fg);
   --color-border: rgba(255, 255, 255, 0.1);
   --color-glass: rgba(10, 10, 10, 0.6);
   --color-sidebar: rgba(15, 15, 15, 0.8);
@@ -20,11 +21,17 @@
     --font-sans: "Vend Sans", sans-serif;
     --background: #ffffff;
     --foreground: #0a0a0a;
+    --color-accent: #000000;
+    --color-accent-hover: #333333;
+    --color-accent-fg: #ffffff;
   }
 
   .dark {
     --background: #0a0a0a;
     --foreground: #ededed;
+    --color-accent: #ffffff;
+    --color-accent-hover: #cccccc;
+    --color-accent-fg: #000000;
   }
 
   body {
