@@ -17,7 +17,6 @@
 
 @layer base {
   :root {
-    --font-sans: "Vend Sans", sans-serif;
     --background: #ffffff;
     --foreground: #0a0a0a;
     --color-accent: #000000;
@@ -185,7 +184,7 @@ figure[data-rehype-pretty-code-figure] {
   border-radius: 0.5rem;
   overflow: hidden;
   border: 1px solid rgba(0, 0, 0, 0.1);
-  background-color: #111827;
+  background-color: #0D0D0D;
 }
 
 .dark figure[data-rehype-pretty-code-figure] {

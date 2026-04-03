@@ -14,6 +14,80 @@ export async function generateStaticParams() {
   }));
 }
 
+const customTheme = {
+  name: "DigitalPro Slate",
+  type: "dark",
+  colors: {
+    "editor.background": "#0D0D0D",
+    "editor.foreground": "#A8A8A8",
+  },
+  tokenColors: [
+    {
+      scope: ["comment", "punctuation.definition.comment", "string.comment"],
+      settings: {
+        foreground: "#4A4A4A",
+      },
+    },
+    {
+      scope: [
+        "keyword",
+        "storage.type",
+        "storage.modifier",
+        "variable.language",
+        "support.type.primitive",
+        "entity.name.tag",
+      ],
+      settings: {
+        foreground: "#FFFFFF",
+      },
+    },
+    {
+      scope: ["entity.name.function", "support.function", "meta.function-call"],
+      settings: {
+        foreground: "#70B1FF",
+      },
+    },
+    {
+      scope: [
+        "variable",
+        "entity.name.variable",
+        "variable.other",
+        "variable.parameter",
+        "support.variable",
+        "entity.name.type",
+        "entity.other.inherited-class",
+      ],
+      settings: {
+        foreground: "#A8A8A8",
+      },
+    },
+    {
+      scope: ["string", "punctuation.definition.string", "string.quoted"],
+      settings: {
+        foreground: "#52FFAD",
+      },
+    },
+    {
+      scope: ["keyword.operator"],
+      settings: {
+        foreground: "#FF7A5C",
+      },
+    },
+    {
+      scope: ["constant.numeric", "constant.language", "constant.character"],
+      settings: {
+        foreground: "#52FFAD",
+      },
+    },
+    {
+      scope: ["punctuation", "meta.brace"],
+      settings: {
+        foreground: "#A8A8A8",
+      },
+    },
+  ],
+};
+
 export default async function DocPage({
   params,
 }: {
@@ -62,8 +136,8 @@ export default async function DocPage({
                   [
                     rehypePrettyCode,
                     {
-                      theme: "github-dark",
-                      keepBackground: false,
+                      theme: customTheme,
+                      keepBackground: true,
                     },
                   ],
                 ],
