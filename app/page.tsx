@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Header } from "@/components/Header";
-import { ArrowRight, Book, Code, Zap } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { getNavStructure } from "@/lib/mdx";
 import { Suspense } from "react";
 import { siteConfig } from "@/config/site";
@@ -48,7 +48,11 @@ export default function Home() {
           <div className="mx-auto grid justify-center gap-6 sm:grid-cols-2 md:max-w-[64rem] md:grid-cols-3">
             <div className="relative overflow-hidden rounded-xl border border-black/10 dark:border-white/10 bg-white dark:bg-[#0a0a0a] p-6 flex flex-col items-center text-center h-full shadow-sm hover:shadow-md transition-shadow">
               <div className="mb-4 flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-black/5 dark:bg-white/5">
-                <Book className="h-6 w-6 text-accent shrink-0" />
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="none" strokeLinecap="round" strokeLinejoin="round" className="h-6 w-6 text-accent shrink-0">
+                  <path d="M8 6H16V8H8V6Z" fill="currentColor"/>
+                  <path d="M16 10H8V12H16V10Z" fill="currentColor"/>
+                  <path fillRule="evenodd" clipRule="evenodd" d="M20 2H4V22H20V2ZM6 16H18V4H6V16ZM6 18V20H18V18H6Z" fill="currentColor"/>
+                </svg>
               </div>
               <h3 className="mb-2 font-bold text-black dark:text-white text-lg">
                 MDX Support
@@ -60,7 +64,10 @@ export default function Home() {
             </div>
             <div className="relative overflow-hidden rounded-xl border border-black/10 dark:border-white/10 bg-white dark:bg-[#0a0a0a] p-6 flex flex-col items-center text-center h-full shadow-sm hover:shadow-md transition-shadow">
               <div className="mb-4 flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-black/5 dark:bg-white/5">
-                <Code className="h-6 w-6 text-accent shrink-0" />
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="none" strokeLinecap="round" strokeLinejoin="round" className="h-6 w-6 text-accent shrink-0">
+                  <path d="M2.58575 12L9.24997 18.6642L10.6642 17.25L5.41418 12L10.6642 6.75001L9.24997 5.33579L2.58575 12Z" fill="currentColor"/>
+                  <path d="M18.5858 12L13.3358 6.75001L14.75 5.33579L21.4142 12L14.75 18.6642L13.3358 17.25L18.5858 12Z" fill="currentColor"/>
+                </svg>
               </div>
               <h3 className="mb-2 font-bold text-black dark:text-white text-lg">
                 Syntax Highlighting
@@ -72,7 +79,9 @@ export default function Home() {
             </div>
             <div className="relative overflow-hidden rounded-xl border border-black/10 dark:border-white/10 bg-white dark:bg-[#0a0a0a] p-6 flex flex-col items-center text-center h-full shadow-sm hover:shadow-md transition-shadow">
               <div className="mb-4 flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-black/5 dark:bg-white/5">
-                <Zap className="h-6 w-6 text-accent shrink-0" />
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="none" strokeLinecap="round" strokeLinejoin="round" className="h-6 w-6 text-accent shrink-0">
+                  <path fillRule="evenodd" clipRule="evenodd" d="M14.6246 1.14923V9.00001H20.4553L9.37464 22.8508V15H3.54401L14.6246 1.14923ZM7.70526 13H11.3746V17.1492L16.294 11H12.6246V6.85079L7.70526 13Z" fill="currentColor"/>
+                </svg>
               </div>
               <h3 className="mb-2 font-bold text-black dark:text-white text-lg">
                 Fast & Accessible

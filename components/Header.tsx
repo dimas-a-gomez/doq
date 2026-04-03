@@ -183,7 +183,7 @@ export function Header({ navItems = [] }: HeaderProps) {
               </span>
             </Link>
             <div className="hidden sm:flex items-center ml-4 px-2 py-0.5 rounded-full bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 text-xs text-gray-500 dark:text-gray-400 font-mono">
-              v1.1.6
+              v1.2.2
             </div>
           </div>
 
@@ -192,7 +192,9 @@ export function Header({ navItems = [] }: HeaderProps) {
               onClick={() => setIsSearchOpen(true)}
               className="p-2 text-gray-500 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors rounded-md hover:bg-black/5 dark:hover:bg-white/5"
             >
-              <Search className="h-5 w-5" />
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="none" strokeLinecap="round" strokeLinejoin="round" className="h-5 w-5">
+                <path fillRule="evenodd" clipRule="evenodd" d="M11 2C6.02944 2 2 6.02944 2 11C2 15.9706 6.02944 20 11 20C13.125 20 15.078 19.2635 16.6177 18.0319L21 22.4142L22.4142 21L18.0319 16.6177C19.2635 15.078 20 13.125 20 11C20 6.02944 15.9706 2 11 2ZM4 11C4 7.13401 7.13401 4 11 4C14.866 4 18 7.13401 18 11C18 14.866 14.866 18 11 18C7.13401 18 4 14.866 4 11Z" fill="currentColor"/>
+              </svg>
               <span className="sr-only">Search</span>
             </button>
 
@@ -203,7 +205,9 @@ export function Header({ navItems = [] }: HeaderProps) {
                   className="p-2 text-gray-500 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors rounded-md hover:bg-black/5 dark:hover:bg-white/5 flex items-center gap-1"
                   title="Change Language"
                 >
-                  <Languages className="h-5 w-5" />
+                  <svg width="20" height="22" viewBox="0 0 24 26" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-5 w-5">
+                    <path d="M17.4639 11.6504C18.5439 11.6504 19.4142 11.8416 20.0742 12.2256C20.7461 12.6095 21.2135 13.2218 21.4775 14.0615L19.2822 14.8359C19.1382 14.2959 18.9097 13.9237 18.5977 13.7197C18.2858 13.5159 17.902 13.4141 17.4463 13.4141C17.0624 13.4141 16.7441 13.5037 16.4922 13.6836C16.2403 13.8515 16.1143 14.0859 16.1143 14.3857C16.1143 14.7217 16.2579 14.9923 16.5459 15.1963C16.8459 15.4002 17.3918 15.5804 18.1836 15.7363C19.3234 15.9643 20.1697 16.3479 20.7217 16.8877C21.2736 17.4156 21.5497 18.1239 21.5498 19.0117C21.5498 20.0437 21.2019 20.8478 20.5059 21.4238C19.8099 21.9878 18.8378 22.2695 17.5898 22.2695C16.426 22.2695 15.478 22.0362 14.7461 21.5684C14.0141 21.1004 13.5458 20.4221 13.3418 19.5342L15.6104 18.9219C15.7063 19.4738 15.934 19.8759 16.2939 20.1279C16.6539 20.3799 17.0924 20.5059 17.6084 20.5059C18.0522 20.5058 18.4126 20.392 18.6885 20.1641C18.9763 19.9241 19.1201 19.6534 19.1201 19.3535C19.12 18.9458 18.9641 18.6339 18.6523 18.418C18.3404 18.202 17.746 18.0163 16.8701 17.8604C15.8141 17.6804 15.01 17.3137 14.458 16.7617C13.9181 16.1977 13.6484 15.5139 13.6484 14.71C13.6484 14.0981 13.81 13.5643 14.1338 13.1084C14.4577 12.6405 14.9019 12.2803 15.4658 12.0283C16.0418 11.7763 16.7079 11.6504 17.4639 11.6504ZM9.5 7H16V9H13V13C13 13.7417 12.7971 14.4358 12.4453 15.0312L14.4141 17L13 18.4141L11.0312 16.4453C10.4358 16.7971 9.74175 17 9 17H3V15H9C9.17857 15 9.35088 14.9736 9.51562 14.9297L5.58594 11L7 9.58594L10.9297 13.5156C10.9736 13.3509 11 13.1786 11 13V9H2V7H7.5V5H9.5V7Z" fill="currentColor"/>
+                  </svg>
                   <span className="text-xs font-medium uppercase">{currentLang}</span>
                 </button>
                 {isLangMenuOpen && (
@@ -241,9 +245,21 @@ export function Header({ navItems = [] }: HeaderProps) {
                 className="p-2 text-gray-500 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors rounded-md hover:bg-black/5 dark:hover:bg-white/5"
               >
                 {isDark ? (
-                  <Sun className="h-5 w-5" />
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="none" strokeLinecap="round" strokeLinejoin="round" className="h-5 w-5">
+                    <path d="M11 19.75V22H13V19.75H11Z" fill="currentColor"/>
+                    <path d="M11 2V4.25H13V2H11Z" fill="currentColor"/>
+                    <path fillRule="evenodd" clipRule="evenodd" d="M6 12C6 8.68629 8.68629 6 12 6C15.3137 6 18 8.68629 18 12C18 15.3137 15.3137 18 12 18C8.68629 18 6 15.3137 6 12ZM12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8Z" fill="currentColor"/>
+                    <path d="M2 11H4.25V13H2V11Z" fill="currentColor"/>
+                    <path d="M19.75 11H22V13H19.75V11Z" fill="currentColor"/>
+                    <path d="M5.63602 4.2218L7.22701 5.81279L5.81279 7.227L4.2218 5.63601L5.63602 4.2218Z" fill="currentColor"/>
+                    <path d="M18.1872 16.773L19.7782 18.364L18.364 19.7782L16.773 18.1872L18.1872 16.773Z" fill="currentColor"/>
+                    <path d="M5.81279 16.773L4.2218 18.364L5.63601 19.7782L7.227 18.1872L5.81279 16.773Z" fill="currentColor"/>
+                    <path d="M18.364 4.2218L16.773 5.81279L18.1872 7.227L19.7782 5.63601L18.364 4.2218Z" fill="currentColor"/>
+                  </svg>
                 ) : (
-                  <Moon className="h-5 w-5" />
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="none" strokeLinecap="round" strokeLinejoin="round" className="h-5 w-5">
+                    <path fillRule="evenodd" clipRule="evenodd" d="M12 5C8.13401 5 5 8.13401 5 12C5 15.866 8.13401 19 12 19C14.5007 19 16.6951 17.6887 17.9331 15.7163C17.122 16.1218 16.2066 16.35 15.2375 16.35C11.9031 16.35 9.2 13.6469 9.2 10.3125C9.2 8.02376 10.4735 6.03246 12.3506 5.00861C12.2345 5.00289 12.1176 5 12 5ZM3 12C3 7.02944 7.02944 3 12 3C13.9337 3 15.7276 3.61095 17.1955 4.65026L16.3442 6.4283C15.9937 6.32866 15.6227 6.275 15.2375 6.275C13.0077 6.275 11.2 8.08265 11.2 10.3125C11.2 12.5423 13.0077 14.35 15.2375 14.35C17.0038 14.35 18.5076 13.2152 19.0547 11.632L20.9999 11.9536C21 11.969 21 11.9845 21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12Z" fill="currentColor"/>
+                  </svg>
                 )}
                 <span className="sr-only">Toggle theme</span>
               </button>

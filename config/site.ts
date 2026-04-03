@@ -1,5 +1,5 @@
 export const siteConfig = {
-  name: "DOQMEN",
+  name: "DOQMENT",
   description: "A modern technical documentation website built with Next.js and Tailwind CSS.",
   links: {
     github: "https://github.com",
