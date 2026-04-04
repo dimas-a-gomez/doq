@@ -1,5 +1,5 @@
 <div align="center">
-<img width="1200" height="475" alt="GHBanner" src="/img/doqmen-presentation.png" />
+<img width="1200" height="475" alt="GHBanner" src="public/img/doqmen-presentation.png" />
 </div>
 
 # DOQMEN User Guide
