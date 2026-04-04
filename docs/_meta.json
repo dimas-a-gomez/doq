@@ -3,6 +3,10 @@
     "title": "Inicio",
     "icon": "Home"
   },
+  "guia": {
+    "title": "Guía de Uso",
+    "icon": "Book"
+  },
   "components": {
     "title": "Componentes",
     "icon": "Blocks"
