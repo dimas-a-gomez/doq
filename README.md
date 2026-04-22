@@ -1,4 +1,4 @@
-![presentation](/img/doqmen-presentation.png)
+![presentation](public/img/doqmen-presentation.png)
 
 # DOQMEN User Guide
 
