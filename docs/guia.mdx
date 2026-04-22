@@ -50,7 +50,64 @@ Este cambio se reflejará automáticamente en el encabezado, el pie de página y
 
 ---
 
-## 3. Cambiar el Logo / Icono
+## 3. Personalizar Colores (Color Principal)
+
+DOQMEN utiliza una estética minimalista monocromática (blanco y negro), pero puedes agregar el color principal de tu marca fácilmente manteniendo el soporte interactivo de modo claro y oscuro.
+
+El color de tu marca se maneja mediante variables CSS. Para cambiar el color principal (denominado "accent" en la plantilla):
+
+1. Abre el archivo `app/globals.css`.
+2. Busca la sección `@layer base`.
+3. Verás la configuración para el modo normal (`:root`) y el modo oscuro (`.dark`).
+
+Por defecto, DOQMEN invierte el blanco y el negro:
+```css
+@layer base {
+  :root {
+    --background: #ffffff;
+    --foreground: #0a0a0a;
+    --color-accent: #000000; /* Color primario en modo claro */
+    --color-accent-hover: #333333; /* Color al pasar el cursor */
+    --color-accent-fg: #ffffff; /* Color del texto dentro de elementos con color primario */
+  }
+
+  .dark {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+    --color-accent: #ffffff; /* Color primario en modo oscuro */
+    --color-accent-hover: #cccccc;
+    --color-accent-fg: #000000;
+  }
+}
+```
+
+Para implementar tu propio color de marca (por ejemplo un azul vibrante como `#0066FF`), modifícalo así:
+
+```css
+@layer base {
+  :root {
+    --background: #ffffff;
+    --foreground: #0a0a0a;
+    --color-accent: #0066FF; 
+    --color-accent-hover: #0052CC;
+    --color-accent-fg: #ffffff;
+  }
+
+  .dark {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+    --color-accent: #3385FF; /* Puedes usar un tono ligeramente más claro para que resalte en fondos oscuros */
+    --color-accent-hover: #66A3FF;
+    --color-accent-fg: #ffffff;
+  }
+}
+```
+
+Al guardar este archivo, todos los botones, enlaces en la documentación y elementos interactivos adoptarán automáticamente el color de tu marca en toda la web.
+
+---
+
+## 4. Cambiar el Logo / Icono
 
 El icono que aparece al lado del nombre del sitio en la barra de navegación es un componente de React que renderiza un SVG.
 
@@ -71,7 +128,7 @@ export function Logo({ className }: { className?: string }) {
 
 ---
 
-## 4. Modificar las Características (Features)
+## 5. Modificar las Características (Features)
 
 En la página principal (`/`) hay una sección de "Features" o características. Para modificar los textos o los iconos de estas tarjetas:
 
@@ -81,7 +138,7 @@ En la página principal (`/`) hay una sección de "Features" o características.
 
 ---
 
-## 5. Crear y subir archivos MDX
+## 6. Crear y subir archivos MDX
 
 DOQMEN utiliza **MDX**, lo que significa que puedes escribir en Markdown normal y al mismo tiempo usar componentes de React (como alertas o botones) dentro de tus documentos.
 

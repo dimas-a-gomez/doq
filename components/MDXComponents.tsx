@@ -1,5 +1,6 @@
 import { AlertCircle, Info, CheckCircle2, AlertTriangle } from "lucide-react";
 import React from "react";
+import { CustomPre } from "./CustomPre";
 
 interface AlertProps {
   type?: "info" | "warning" | "success" | "error";
@@ -54,5 +55,5 @@ const Alert = ({ type = "info", title, children }: AlertProps) => {
 
 export const components = {
   Alert,
-  // We can add more custom components here
+  pre: CustomPre,
 };
