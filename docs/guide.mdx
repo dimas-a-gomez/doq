@@ -1,0 +1,181 @@
+---
+title: "DOQMEN User Guide"
+description: "Learn how to configure, customize, and deploy your own documentation with DOQMEN."
+---
+
+# DOQMEN User Guide
+
+DOQMEN is an open-source documentation template built with Next.js, Tailwind CSS, and MDX. It is designed to be fast, accessible, and very easy to customize.
+
+In this guide, you will learn how to download the repository, install dependencies, modify your site's information, and create your own documents.
+
+---
+
+## 1. Local Installation and Setup
+
+If you have downloaded or cloned the DOQMEN repository, follow these steps to run the development server on your computer:
+
+1. **Install dependencies:** Open your terminal in the project folder and run:
+   ```bash
+   npm install
+   ```
+
+2. **Start the development server:**
+   ```bash
+   npm run dev
+   ```
+
+3. **Open your browser:** Go to `http://localhost:3000` to see your live site.
+
+---
+
+## 2. Customize the Site Name
+
+To change the name "DOQMEN" to your project or brand name, you must edit the main configuration file.
+
+1. Open the `config/site.ts` file.
+2. Modify the `name` and `description` properties:
+
+```typescript
+export const siteConfig = {
+  name: "My New Documentation",
+  description: "Description of my awesome project.",
+  links: {
+    github: "https://github.com/your-username/your-repo",
+  },
+};
+```
+
+This change will automatically reflect in the header, footer, and metadata (SEO) across the entire site.
+
+---
+
+## 3. Customize Colors (Main Color)
+
+DOQMEN uses a monochromatic minimalist aesthetic (black and white), but you can easily add your brand's main color while maintaining interactive light and dark mode support.
+
+Your brand's color is handled via CSS variables. To change the main color (referred to as "accent" in the template):
+
+1. Open the `app/globals.css` file.
+2. Find the `@layer base` section.
+3. You will see the configuration for standard mode (`:root`) and dark mode (`.dark`).
+
+By default, DOQMEN inverts black and white:
+```css
+@layer base {
+  :root {
+    --background: #ffffff;
+    --foreground: #0a0a0a;
+    --color-accent: #000000; /* Primary color in light mode */
+    --color-accent-hover: #333333; /* Hover color */
+    --color-accent-fg: #ffffff; /* Text color inside elements with the primary color */
+  }
+
+  .dark {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+    --color-accent: #ffffff; /* Primary color in dark mode */
+    --color-accent-hover: #cccccc;
+    --color-accent-fg: #000000;
+  }
+}
+```
+
+To implement your own brand color (for example, a vibrant blue like `#0066FF`), modify it like this:
+
+```css
+@layer base {
+  :root {
+    --background: #ffffff;
+    --foreground: #0a0a0a;
+    --color-accent: #0066FF; 
+    --color-accent-hover: #0052CC;
+    --color-accent-fg: #ffffff;
+  }
+
+  .dark {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+    --color-accent: #3385FF; /* You can use a slightly lighter shade so it pops on dark backgrounds */
+    --color-accent-hover: #66A3FF;
+    --color-accent-fg: #ffffff;
+  }
+}
+```
+
+After saving this file, all buttons, links in the documentation, and interactive elements will automatically adopt your brand's color across the entire web.
+
+---
+
+## 4. Change the Logo / Icon
+
+The icon that appears next to the site name in the navigation bar is a React component that renders an SVG.
+
+1. Open the `components/Logo.tsx` file.
+2. Replace the `<svg>...</svg>` code with your own logo's SVG.
+3. Make sure to keep the `className={className}` property in your `<svg>` tag so that size and color styles are accurately applied.
+
+Example:
+```tsx
+export function Logo({ className }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="currentColor">
+      {/* Your logo path here */}
+    </svg>
+  );
+}
+```
+
+---
+
+## 5. Modify the Features
+
+On the main page (`/`), there is a "Features" section. To modify the text or icons of these cards:
+
+1. Open the `app/page.tsx` file.
+2. Search for the `<section>` containing the "Features" title.
+3. Inside, you will see several `<div>` blocks representing each card. You can change the `<h3>` title, the `<p>` paragraph, and the `<svg>` code representing each icon.
+
+---
+
+## 6. Create and Upload MDX Files
+
+DOQMEN uses **MDX**, which means you can write in standard Markdown and simultaneously use React components (like alerts or buttons) inside your documents.
+
+All documentation files live in the `docs/` folder.
+
+### Create a new page
+
+1. Create a new file in the `docs/` folder, for example `docs/my-page.mdx`.
+2. Add the **Frontmatter** at the beginning of the file. This defines the page title and description:
+
+```mdx
+---
+title: "My First Page"
+description: "This is a test page."
+---
+
+# Hello World
+
+Your documentation content goes here.
+```
+
+### Organize the navigation
+
+For your new page to appear in the sidebar with the correct name and order, you must edit the `docs/_meta.json` file.
+
+```json
+{
+  "index": {
+    "title": "Home",
+    "icon": "Home"
+  },
+  "my-page": {
+    "title": "My First Page",
+    "icon": "FileText"
+  }
+}
+```
+*Note: The key in the JSON (`my-page`) must exactly match your filename without the `.mdx` extension.*
+
+And that's it! With these steps, you can now adapt DOQMEN to your needs and create awesome documentation.

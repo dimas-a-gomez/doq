@@ -1,13 +1,13 @@
-# Directorio de Imágenes
+# Images Directory
 
-Esta carpeta (`public/img`) está destinada a alojar todas las imágenes estáticas de tu documentación. 
+This folder (`public/img`) is intended to host all static images for your documentation.
 
-Las imágenes que coloques aquí podrán ser referenciadas directamente en tus archivos Markdown o MDX utilizando la ruta desde la raíz pública. 
+Any images you place here can be referenced directly in your Markdown or MDX files using the path from the public root.
 
-Por ejemplo, si subes una imagen llamada `mi-logo.png` a esta carpeta, podrás usarla en tu documentación así:
+For example, if you upload an image named `my-logo.png` to this folder, you can use it in your documentation like this:
 
 ```md
-![Mi logo](/img/mi-logo.png)
+![My logo](/img/my-logo.png)
 ```
 
-*(Este archivo se ha creado para asegurar que Git rastree la carpeta de imágenes aunque esté vacía).*
+*(This file was created to ensure Git tracks the images folder even if it is empty).*

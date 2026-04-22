@@ -1,14 +1,14 @@
 {
   "index": {
-    "title": "Inicio",
+    "title": "Home",
     "icon": "Home"
   },
-  "guia": {
-    "title": "Guía de Uso",
+  "guide": {
+    "title": "User Guide",
     "icon": "Book"
   },
   "components": {
-    "title": "Componentes",
+    "title": "Components",
     "icon": "Blocks"
   },
   "gadgets": {

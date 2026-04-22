@@ -21,7 +21,7 @@ export const CustomPre = ({ children, ...props }: any) => {
   };
 
   return (
-    <div className="relative group cursor-pointer" onClick={handleCopy} title="Clic para copiar">
+    <div className="relative group cursor-pointer" onClick={handleCopy} title="Click to copy">
       <pre ref={preRef} {...props}>
         {children}
       </pre>
