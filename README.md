@@ -1,5 +1,5 @@
 <div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://elbuezon.wordpress.com/wp-content/uploads/2026/04/doqmen-presentation.png" />
+<img width="1200" height="475" alt="GHBanner" src="/img/doqmen-presentation.png" />
 </div>
 
 # DOQMEN User Guide
