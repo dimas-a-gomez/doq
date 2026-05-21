@@ -21,8 +21,8 @@
     --background: #F7F7F7;
     --surface: #F1F1F1;
     --foreground: #0a0a0a;
-    --color-accent: #000000;
-    --color-accent-hover: #333333;
+    --color-accent: #006FFF;
+    --color-accent-hover: #0056cc;
     --color-accent-fg: #ffffff;
     --border: rgba(0, 0, 0, 0.08);
   }
@@ -31,9 +31,9 @@
     --background: #252525;
     --surface: #1E1E1E;
     --foreground: #ededed;
-    --color-accent: #ffffff;
-    --color-accent-hover: #cccccc;
-    --color-accent-fg: #000000;
+    --color-accent: #006FFF;
+    --color-accent-hover: #338dff;
+    --color-accent-fg: #ffffff;
     --border: rgba(255, 255, 255, 0.08);
   }
 
@@ -190,14 +190,44 @@ figure[data-rehype-pretty-code-figure] {
   overflow: hidden;
   border: 1px solid rgba(0, 0, 0, 0.1);
   background-color: #0D0D0D;
+  position: relative;
+  padding-top: 2.5rem;
+}
+
+figure[data-rehype-pretty-code-figure]::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2.5rem;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+figure[data-rehype-pretty-code-figure]::after {
+  content: '';
+  position: absolute;
+  top: 0.875rem;
+  left: 1rem;
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 50%;
+  background-color: var(--color-accent);
+  box-shadow: 1.25rem 0 0 var(--color-accent), 2.5rem 0 0 var(--color-accent);
 }
 
 .dark figure[data-rehype-pretty-code-figure] {
   border: 1px solid var(--color-border);
 }
 
+.dark figure[data-rehype-pretty-code-figure]::before {
+  background-color: var(--surface);
+  border-bottom: 1px solid var(--color-border);
+}
+
 figure[data-rehype-pretty-code-figure] pre {
-  padding: 1rem;
+  padding: 1rem 0;
   overflow-x: auto;
 }
 
@@ -205,15 +235,31 @@ figure[data-rehype-pretty-code-figure] code {
   font-family: var(--font-mono);
   font-size: 0.875rem;
   line-height: 1.5;
+  counter-reset: line;
+  display: flex;
+  flex-direction: column;
 }
 
 figure[data-rehype-pretty-code-figure] [data-line] {
-  padding: 0 0.25rem;
+  padding: 0 1rem;
+  display: inline-block;
+  min-height: 1.5rem;
+}
+
+figure[data-rehype-pretty-code-figure] [data-line]::before {
+  counter-increment: line;
+  content: counter(line);
+  display: inline-block;
+  width: 1.5rem;
+  margin-right: 1.25rem;
+  text-align: right;
+  color: rgba(255, 255, 255, 0.3);
+  font-size: 0.75rem;
+  user-select: none;
 }
 
 figure[data-rehype-pretty-code-figure] [data-highlighted-line] {
   background-color: rgba(255, 255, 255, 0.1);
-  border-left: 2px solid var(--color-accent);
 }
 
 /* Hide Google Translate UI */

@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Space_Grotesk, Space_Mono } from "next/font/google";
 import Script from "next/script";
-import { Footer } from "@/components/Footer";
 import { siteConfig } from "@/config/site";
 import "./globals.css";
 
@@ -58,7 +57,6 @@ export default function RootLayout({
         <div className="flex-1 flex flex-col">
           {children}
         </div>
-        <Footer />
       </body>
     </html>
   );
