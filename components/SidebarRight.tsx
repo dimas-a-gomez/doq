@@ -45,8 +45,8 @@ export function SidebarRight({ headings }: { headings: Heading[] }) {
   }
 
   return (
-    <aside className="hidden xl:block w-64 shrink-0 border-l border-black/10 dark:border-white/10 bg-white dark:bg-[#0a0a0a]">
-      <div className="sticky top-14 h-[calc(100vh-3.5rem)] overflow-y-auto py-6 pl-6 pr-8 lg:py-8">
+    <aside className="hidden xl:block w-64 shrink-0 rounded-2xl border border-border bg-[var(--surface)] shadow-sm sticky top-24 h-[calc(100vh-8rem)]">
+      <div className="h-full overflow-y-auto py-6 px-6 lg:py-8">
         <div className="space-y-2">
           <p className="font-semibold text-sm text-black dark:text-white">
             On this page

@@ -113,8 +113,8 @@ export default async function DocPage({
   );
 
   return (
-    <div className="xl:grid xl:grid-cols-[1fr_250px] xl:gap-10">
-      <div className="mx-auto w-full min-w-0">
+    <div className="xl:grid xl:grid-cols-[1fr_250px] xl:gap-8 lg:gap-10 items-start">
+      <div className="mx-auto w-full min-w-0 rounded-2xl border border-border bg-[var(--surface)] shadow-sm px-6 py-8 md:p-10">
         <div className="mb-8">
           <h1 className="font-display text-3xl sm:text-4xl font-bold tracking-tight text-black dark:text-white mb-2 break-words">
             {doc.meta.title}

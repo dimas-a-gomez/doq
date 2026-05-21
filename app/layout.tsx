@@ -37,7 +37,7 @@ export default function RootLayout({
         <link href="https://fonts.googleapis.com/css2?family=Vend+Sans:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet" />
       </head>
       <body
-        className="bg-white dark:bg-[#0a0a0a] text-black dark:text-white min-h-screen flex flex-col antialiased"
+        className="min-h-screen flex flex-col antialiased"
         suppressHydrationWarning
       >
         <div id="google_translate_element" style={{ display: "none" }}></div>

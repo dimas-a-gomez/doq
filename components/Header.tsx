@@ -166,8 +166,8 @@ export function Header({ navItems = [] }: HeaderProps) {
 
   return (
     <>
-      <header className="sticky top-0 z-50 w-full border-b border-black/10 dark:border-white/10 bg-white dark:bg-[#0a0a0a]">
-        <div className="container mx-auto flex h-14 max-w-screen-2xl items-center px-4 md:px-8">
+      <header className="sticky top-4 z-50 mx-4 md:mx-8 xl:mx-auto max-w-screen-2xl rounded-2xl border border-border bg-[var(--surface)] shadow-sm">
+        <div className="flex h-14 items-center px-4 md:px-8">
           <div className="flex items-center gap-4">
             <button 
               onClick={() => setIsMobileMenuOpen(true)}
@@ -216,7 +216,7 @@ export function Header({ navItems = [] }: HeaderProps) {
                       className="fixed inset-0 z-40" 
                       onClick={() => setIsLangMenuOpen(false)}
                     />
-                    <div className="absolute right-0 mt-2 w-32 bg-white dark:bg-[#111] border border-black/10 dark:border-white/10 rounded-md shadow-lg overflow-hidden z-50">
+                    <div className="absolute right-0 mt-2 w-32 bg-[var(--surface)] border border-border rounded-md shadow-lg overflow-hidden z-50">
                       {availableLangs.map((lang) => (
                         <button
                           key={lang.code}
@@ -275,7 +275,7 @@ export function Header({ navItems = [] }: HeaderProps) {
             className="fixed inset-0 bg-black/50 backdrop-blur-sm"
             onClick={() => setIsMobileMenuOpen(false)}
           />
-          <div className="fixed inset-y-0 left-0 w-4/5 max-w-sm bg-white dark:bg-[#0a0a0a] shadow-2xl flex flex-col">
+          <div className="fixed inset-y-0 left-0 w-4/5 max-w-sm bg-[var(--surface)] shadow-2xl flex flex-col">
             <div className="flex items-center justify-between p-4 border-b border-black/10 dark:border-white/10">
               <Link href="/" className="flex items-center gap-2" onClick={() => setIsMobileMenuOpen(false)}>
                 <Logo className="h-6 w-6 text-accent" />
@@ -320,7 +320,7 @@ export function Header({ navItems = [] }: HeaderProps) {
             className="fixed inset-0 bg-black/50 backdrop-blur-sm transition-opacity"
             onClick={() => setIsSearchOpen(false)}
           />
-          <div className="relative w-full max-w-2xl overflow-hidden rounded-xl bg-white dark:bg-[#111] border border-black/10 dark:border-white/10 shadow-2xl">
+          <div className="relative w-full max-w-2xl overflow-hidden rounded-xl bg-[var(--surface)] border border-border shadow-2xl">
             <form
               onSubmit={handleSearch}
               className="flex items-center border-b border-black/10 dark:border-white/10 px-4"

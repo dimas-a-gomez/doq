@@ -8,12 +8,12 @@ import { siteConfig } from "@/config/site";
 export default function Home() {
   const navItems = getNavStructure();
   return (
-    <div className="flex flex-col bg-white dark:bg-[#0a0a0a] flex-1">
-      <Suspense fallback={<div className="h-14 w-full border-b border-black/10 dark:border-white/10 bg-white dark:bg-[#0a0a0a]" />}>
+    <div className="flex flex-col flex-1">
+      <Suspense fallback={<div className="h-14 mx-4 md:mx-8 xl:mx-auto max-w-screen-2xl rounded-2xl border border-border bg-[var(--surface)] mt-4" />}>
         <Header navItems={navItems} />
       </Suspense>
-      <main className="flex-1">
-        <section className="space-y-6 pb-8 pt-16 md:pb-12 md:pt-24 lg:py-32">
+      <main className="flex-1 mt-6 lg:mt-8 pb-8 px-4 md:px-8 max-w-screen-2xl mx-auto w-full">
+        <div className="rounded-2xl border border-border bg-[var(--surface)] shadow-sm px-6 py-12 md:py-24">
           <div className="container mx-auto flex max-w-[64rem] flex-col items-center gap-4 text-center px-4">
             <Link
               href="/docs"
@@ -37,7 +37,7 @@ export default function Home() {
               </Link>
             </div>
           </div>
-        </section>
+        </div>
 
         <section className="container mx-auto space-y-8 py-16 md:py-24 lg:py-32 px-4">
           <div className="mx-auto flex max-w-[64rem] flex-col items-center gap-4 text-center">
@@ -46,7 +46,7 @@ export default function Home() {
             </h2>
           </div>
           <div className="mx-auto grid justify-center gap-6 sm:grid-cols-2 md:max-w-[64rem] md:grid-cols-3">
-            <div className="relative overflow-hidden rounded-xl border border-black/10 dark:border-white/10 bg-white dark:bg-[#0a0a0a] p-6 flex flex-col items-center text-center h-full shadow-sm hover:shadow-md transition-shadow">
+            <div className="relative overflow-hidden rounded-xl border border-border bg-[var(--surface)] p-6 flex flex-col items-center text-center h-full shadow-sm hover:shadow-md transition-shadow">
               <div className="mb-4 flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-black/5 dark:bg-white/5">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="none" strokeLinecap="round" strokeLinejoin="round" className="h-6 w-6 text-accent shrink-0">
                   <path d="M8 6H16V8H8V6Z" fill="currentColor"/>
@@ -62,7 +62,7 @@ export default function Home() {
                 seamlessly.
               </p>
             </div>
-            <div className="relative overflow-hidden rounded-xl border border-black/10 dark:border-white/10 bg-white dark:bg-[#0a0a0a] p-6 flex flex-col items-center text-center h-full shadow-sm hover:shadow-md transition-shadow">
+            <div className="relative overflow-hidden rounded-xl border border-border bg-[var(--surface)] p-6 flex flex-col items-center text-center h-full shadow-sm hover:shadow-md transition-shadow">
               <div className="mb-4 flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-black/5 dark:bg-white/5">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="none" strokeLinecap="round" strokeLinejoin="round" className="h-6 w-6 text-accent shrink-0">
                   <path d="M2.58575 12L9.24997 18.6642L10.6642 17.25L5.41418 12L10.6642 6.75001L9.24997 5.33579L2.58575 12Z" fill="currentColor"/>
@@ -77,7 +77,7 @@ export default function Home() {
                 Shiki.
               </p>
             </div>
-            <div className="relative overflow-hidden rounded-xl border border-black/10 dark:border-white/10 bg-white dark:bg-[#0a0a0a] p-6 flex flex-col items-center text-center h-full shadow-sm hover:shadow-md transition-shadow">
+            <div className="relative overflow-hidden rounded-xl border border-border bg-[var(--surface)] p-6 flex flex-col items-center text-center h-full shadow-sm hover:shadow-md transition-shadow">
               <div className="mb-4 flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-black/5 dark:bg-white/5">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="none" strokeLinecap="round" strokeLinejoin="round" className="h-6 w-6 text-accent shrink-0">
                   <path fillRule="evenodd" clipRule="evenodd" d="M14.6246 1.14923V9.00001H20.4553L9.37464 22.8508V15H3.54401L14.6246 1.14923ZM7.70526 13H11.3746V17.1492L16.294 11H12.6246V6.85079L7.70526 13Z" fill="currentColor"/>
