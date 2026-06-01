@@ -2,6 +2,28 @@ import { AlertCircle, Info, CheckCircle2, AlertTriangle } from "lucide-react";
 import React from "react";
 import { CustomPre } from "./CustomPre";
 
+const createHeading = (Tag: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6') => {
+  const Heading = ({ children, id, ...props }: any) => {
+    return (
+      <Tag id={id} className={`group relative font-bold ${props.className || ''}`} {...props}>
+        {id && (
+          <a
+             href={`#${id}`}
+             className="absolute -left-6 top-1/2 -translate-y-1/2 text-gray-400 opacity-0 transition-opacity hover:text-accent group-hover:opacity-100 !no-underline !text-xl"
+             aria-hidden="true"
+             tabIndex={-1}
+          >
+             #
+          </a>
+        )}
+        {children}
+      </Tag>
+    );
+  };
+  Heading.displayName = Tag;
+  return Heading;
+};
+
 interface AlertProps {
   type?: "info" | "warning" | "success" | "error";
   title?: string;
@@ -56,4 +78,10 @@ const Alert = ({ type = "info", title, children }: AlertProps) => {
 export const components = {
   Alert,
   pre: CustomPre,
+  h1: createHeading('h1'),
+  h2: createHeading('h2'),
+  h3: createHeading('h3'),
+  h4: createHeading('h4'),
+  h5: createHeading('h5'),
+  h6: createHeading('h6'),
 };
