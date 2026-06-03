@@ -16,8 +16,8 @@ export default async function DocPage({ params }: { params: Promise<{ slug?: str
 
   return (
     <div className="lg:grid lg:grid-cols-[1fr_200px] xl:grid-cols-[1fr_250px] lg:gap-8 items-start">
-      <div className="mx-auto w-full min-w-0">
-        <div className="prose prose-slate dark:prose-invert max-w-none font-sans">
+      <div className="mx-auto w-full min-w-0 bg-[#262626] rounded-2xl p-6 md:p-10 text-white">
+        <div className="prose prose-invert max-w-none font-sans">
           <MDXRemote 
             source={doc.content} 
             components={components as any}
