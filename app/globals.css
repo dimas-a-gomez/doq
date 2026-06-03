@@ -39,6 +39,19 @@ body {
   box-shadow: none !important;
 }
 
+/* Fix hr element borders overridden by the global transparent rule */
+hr {
+  border-color: rgba(0, 0, 0, 0.1) !important;
+}
+.dark hr {
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Style list markers with the accent color */
+.prose li::marker {
+  color: var(--color-accent) !important;
+}
+
 /* Minimalist Scrollbar Settings */
 .custom-scrollbar::-webkit-scrollbar {
   width: 6px;
