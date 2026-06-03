@@ -1,5 +1,6 @@
 import fs from 'fs';
 import path from 'path';
+import matter from 'gray-matter';
 
 export async function getDocContent(slugArray: string[] = []) {
   const docsDir = path.join(process.cwd(), 'docs');
@@ -12,8 +13,9 @@ export async function getDocContent(slugArray: string[] = []) {
   }
 
   if (fs.existsSync(filePath)) {
-    const content = fs.readFileSync(filePath, 'utf8');
-    return { content };
+    const rawContent = fs.readFileSync(filePath, 'utf8');
+    const { data: frontmatter, content } = matter(rawContent);
+    return { content, frontmatter };
   }
   
   return null;

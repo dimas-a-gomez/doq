@@ -5,6 +5,8 @@ import { SidebarRight } from "@/components/SidebarRight";
 import { components } from "@/components/MDXComponents";
 import rehypeSlug from "rehype-slug";
 import rehypePrettyCode from "rehype-pretty-code";
+import { DocsFooter } from "@/components/DocsFooter";
+import { getDocsConfig } from "@/config/docs";
 
 export default async function DocPage({ params }: { params: Promise<{ slug?: string[] }> }) {
   const resolvedParams = await params;
@@ -13,6 +15,16 @@ export default async function DocPage({ params }: { params: Promise<{ slug?: str
   if (!doc) {
     notFound();
   }
+
+  const docsConfig = getDocsConfig();
+  const allLinks = docsConfig.flatMap((group) => group.items);
+  const currentPath = resolvedParams.slug && resolvedParams.slug.length > 0 
+    ? `/docs/${resolvedParams.slug.join('/')}` 
+    : '/docs';
+
+  const currentIndex = allLinks.findIndex((link) => link.href === currentPath);
+  const previous = currentIndex > 0 ? allLinks[currentIndex - 1] : null;
+  const next = currentIndex !== -1 && currentIndex < allLinks.length - 1 ? allLinks[currentIndex + 1] : null;
 
   return (
     <div className="lg:grid lg:grid-cols-[1fr_200px] xl:grid-cols-[1fr_250px] lg:gap-8 h-full overflow-hidden">
@@ -35,6 +47,11 @@ export default async function DocPage({ params }: { params: Promise<{ slug?: str
               }}
             />
           </div>
+          <DocsFooter 
+            previous={previous} 
+            next={next} 
+            frontmatter={doc.frontmatter || {}} 
+          />
         </div>
       </div>
       <SidebarRight />
