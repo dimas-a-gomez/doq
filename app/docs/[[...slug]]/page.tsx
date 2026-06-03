@@ -28,8 +28,8 @@ export default async function DocPage({ params }: { params: Promise<{ slug?: str
 
   return (
     <div className="lg:grid lg:grid-cols-[1fr_200px] xl:grid-cols-[1fr_250px] lg:gap-8 h-full overflow-hidden">
-      <div className="h-full overflow-y-auto custom-scrollbar px-2 pb-16 pt-6 lg:pt-8 w-full">
-        <div className="mx-auto w-full min-w-0 bg-[#F0F0F0] dark:bg-[#262626] rounded-2xl p-6 md:p-10 text-foreground dark:text-white">
+      <div className="h-full overflow-y-auto custom-scrollbar px-2 lg:px-8 pb-16 pt-6 lg:pt-8 w-full">
+        <div className="mx-auto w-full min-w-0 text-foreground dark:text-white">
           <div className="prose dark:prose-invert max-w-none font-sans">
             <MDXRemote 
               source={doc.content} 
