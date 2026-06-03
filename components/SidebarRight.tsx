@@ -7,11 +7,17 @@ export function SidebarRight() {
 
   useEffect(() => {
     const elements = Array.from(document.querySelectorAll("main h2, main h3"))
-      .map((element) => ({
-        id: element.id,
-        text: element.textContent || "",
-        level: Number(element.tagName.replace("H", ""))
-      }))
+      .map((element) => {
+        let text = element.textContent || "";
+        if (element.tagName === "H3") {
+          text = text.replace(/^#\s*/, "");
+        }
+        return {
+          id: element.id,
+          text: text,
+          level: Number(element.tagName.replace("H", ""))
+        };
+      })
       .filter((heading) => heading.id);
     
     setHeadings(elements);
@@ -42,25 +48,34 @@ export function SidebarRight() {
       <aside className="h-full overflow-y-auto py-6 px-6 lg:py-8 custom-scrollbar">
         <div className="space-y-4">
           <p className="font-semibold text-sm">En esta página</p>
-          <ul className="space-y-2.5 text-sm">
-            {headings.map((heading) => (
-              <li
-                key={heading.id}
-                style={{ paddingLeft: `${(heading.level - 2) * 1}rem` }}
-              >
+          <div className="flex flex-col text-sm">
+            {headings.map((heading) => {
+              const isH3 = heading.level === 3;
+              const isActive = activeId === heading.id;
+
+              return (
                 <a
+                  key={heading.id}
                   href={`#${heading.id}`}
-                  className={`inline-block transition-colors hover:text-foreground ${
-                    activeId === heading.id
-                      ? "text-accent font-medium"
-                      : "text-gray-500 dark:text-gray-400"
+                  className={`block transition-colors font-bold ${
+                    isH3 
+                      ? `pl-4 py-1.5 ml-2 border-l-2 ${
+                          isActive 
+                            ? '!border-foreground text-foreground' 
+                            : '!border-black/10 dark:!border-white/10 text-foreground/60 hover:text-foreground hover:!border-black/20 dark:hover:!border-white/20'
+                        }`
+                      : `pb-2 pt-4 ${
+                          isActive
+                            ? "text-foreground"
+                            : "text-foreground/60 hover:text-foreground"
+                        }`
                   }`}
                 >
                   {heading.text}
                 </a>
-              </li>
-            ))}
-          </ul>
+              );
+            })}
+          </div>
         </div>
       </aside>
     </div>

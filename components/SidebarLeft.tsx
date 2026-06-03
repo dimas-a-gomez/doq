@@ -10,24 +10,30 @@ export function SidebarLeft() {
   return (
     <div className="hidden h-full shrink-0 md:block md:w-[220px] lg:w-[240px] font-mono">
       <aside className="h-full overflow-y-auto py-6 pr-6 lg:py-8 custom-scrollbar">
-        <div className="w-full flex flex-col gap-6">
-          {docs.map((group) => (
-            <div key={group.title} className="flex flex-col gap-2">
-              <h4 className="font-semibold text-sm text-foreground">{group.title}</h4>
-              <div className="flex flex-col gap-1">
-                {group.items.map((item) => (
-                  <Link
-                    key={item.href}
-                    href={item.href}
-                    className={`text-sm px-2 py-1.5 rounded-md transition-colors ${
-                      pathname === item.href
-                        ? "bg-accent/10 text-accent font-medium/10"
-                        : "text-gray-600 dark:text-gray-400 hover:bg-black/5 dark:hover:bg-white/5"
-                    }`}
-                  >
-                    {item.title}
-                  </Link>
-                ))}
+        <div className="w-full flex flex-col">
+          {docs.map((group, index) => (
+            <div key={group.title} className="flex flex-col">
+              {index > 0 && <hr className="my-6 border-black/10 dark:border-white/10" />}
+              <div className="flex flex-col gap-2">
+                <h4 className="flex items-center gap-2 font-semibold text-sm text-foreground">
+                  {group.icon && <group.icon className="h-4 w-4" />}
+                  {group.title}
+                </h4>
+                <div className="flex flex-col gap-1">
+                  {group.items.map((item) => (
+                    <Link
+                      key={item.href}
+                      href={item.href}
+                      className={`text-sm px-2 py-1.5 rounded-md transition-colors font-bold ${
+                        pathname === item.href
+                          ? "bg-accent/10 text-accent"
+                          : "text-foreground/60 hover:text-foreground hover:bg-black/5 dark:hover:bg-white/5"
+                      }`}
+                    >
+                      {item.title}
+                    </Link>
+                  ))}
+                </div>
               </div>
             </div>
           ))}
