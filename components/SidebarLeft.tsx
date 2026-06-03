@@ -8,8 +8,8 @@ export function SidebarLeft() {
   const docs = getDocsConfig();
 
   return (
-    <aside className="fixed top-14 z-30 hidden h-[calc(100vh-3.5rem)] w-full shrink-0 md:sticky md:block md:w-[220px] lg:w-[240px] font-mono">
-      <div className="h-full overflow-y-auto py-6 pr-6 lg:py-8 min-h-[calc(100vh-3.5rem)]">
+    <div className="hidden h-full shrink-0 md:block md:w-[220px] lg:w-[240px] font-mono">
+      <aside className="h-full overflow-y-auto py-6 pr-6 lg:py-8 custom-scrollbar">
         <div className="w-full flex flex-col gap-6">
           {docs.map((group) => (
             <div key={group.title} className="flex flex-col gap-2">
@@ -32,7 +32,7 @@ export function SidebarLeft() {
             </div>
           ))}
         </div>
-      </div>
-    </aside>
+      </aside>
+    </div>
   );
 }

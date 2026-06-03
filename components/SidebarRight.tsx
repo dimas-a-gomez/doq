@@ -38,8 +38,8 @@ export function SidebarRight() {
   if (headings.length === 0) return null;
 
   return (
-    <aside className="hidden lg:block w-[200px] xl:w-[250px] shrink-0 sticky top-14 h-[calc(100vh-3.5rem)] font-mono">
-      <div className="h-full overflow-y-auto py-6 px-6 lg:py-8">
+    <div className="hidden lg:block w-[200px] xl:w-[250px] shrink-0 font-mono h-full">
+      <aside className="h-full overflow-y-auto py-6 px-6 lg:py-8 custom-scrollbar">
         <div className="space-y-4">
           <p className="font-semibold text-sm">En esta página</p>
           <ul className="space-y-2.5 text-sm">
@@ -62,7 +62,7 @@ export function SidebarRight() {
             ))}
           </ul>
         </div>
-      </div>
-    </aside>
+      </aside>
+    </div>
   );
 }
