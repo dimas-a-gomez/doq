@@ -1,4 +1,5 @@
 import React from "react";
+import { CopyButton } from "./CopyButton";
 
 const createHeading = (Tag: "h1" | "h2" | "h3" | "h4" | "h5" | "h6") => {
   const Heading = ({ children, id, ...props }: any) => {
@@ -31,8 +32,11 @@ export const components = {
   h6: createHeading("h6"),
   pre: (props: any) => {
     return (
-      <div className="relative my-4 rounded-lg bg-[#0d1117] overflow-x-auto text-sm p-4">
-        <pre {...props} className="font-mono bg-transparent m-0 p-0" />
+      <div className="relative my-4 rounded-lg bg-[rgba(0,111,255,0.05)] dark:bg-[rgba(0,111,255,0.15)] code-block-wrapper text-sm group">
+        <CopyButton />
+        <div className="overflow-x-auto p-4">
+          <pre {...props} className="font-mono bg-transparent m-0 p-0 !bg-transparent" />
+        </div>
       </div>
     );
   }

@@ -26,7 +26,10 @@ export default async function DocPage({ params }: { params: Promise<{ slug?: str
                 mdxOptions: {
                   rehypePlugins: [
                     rehypeSlug,
-                    [rehypePrettyCode as any, { theme: "github-dark" }]
+                    [rehypePrettyCode as any, { 
+                      theme: { light: "github-light", dark: "github-dark" },
+                      keepBackground: false 
+                    }]
                   ]
                 }
               }}
