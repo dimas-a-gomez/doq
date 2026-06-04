@@ -7,7 +7,7 @@ export function getDocsConfig() {
       icon: Rocket,
       items: [
         { title: 'Introducción', href: '/docs' },
-        { title: 'Instalación', href: '/docs/installation', badge: 'Nuevo' },
+        { title: 'Instalación', href: '/docs/installation', badge: 'Nuevo', badgeVariant: 'success' },
         { title: 'Registro de cambios', href: '/docs/changelog' },
         { title: 'Explorador visual', href: '/docs/explorador-visual' }
       ]
@@ -31,6 +31,7 @@ export function getDocsConfig() {
       icon: Braces,
       items: [
         { title: 'Avisos', href: '/docs/shortcodes/avisos' },
+        { title: 'Badges', href: '/docs/shortcodes/badges' },
         { title: 'Botones', href: '/docs/shortcodes/botones' },
         { title: 'Código', href: '/docs/shortcodes/codigo' },
         { title: 'Columnas', href: '/docs/shortcodes/columnas' },

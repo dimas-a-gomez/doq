@@ -1,0 +1,42 @@
+---
+date: "4 de Junio de 2026"
+author: "Dimas A. Gómez"
+---
+
+# Badges (Etiquetas)
+
+El componente `<Badge />` permite resaltar estados, etiquetas o versiones tanto en los títulos como en el contenido. Soporta colores diferentes según la intención o importancia del mensaje.
+
+## Variantes Disponibles
+
+Puedes utilizar la propiedad `variant` para cambiar el color de la etiqueta. A continuación te presentamos todos los colores y sus casos de uso recomendados:
+
+1. **Gris (Default)**: `<Badge variant="default">Estable</Badge>` — Para indicar una versión antigua o estable. (O simplemente omitir la variante `<Badge>Estable</Badge>`)
+2. **Azul (Accent)**: `<Badge variant="accent">Última v1.1</Badge>` — Para indicar la última versión u opciones predeterminadas de atención.
+3. **Verde (Success)**: `<Badge variant="success">Nuevo</Badge>` — Para indicar lo nuevo que se agregó.
+4. **Naranja (Warning)**: `<Badge variant="warning">Obsoleto</Badge>` — Para indicar que no es recomendable usar tal función, o alertar que no era segura pero ya se corrigió.
+5. **Rojo (Danger)**: `<Badge variant="danger">Eliminado</Badge>` — Para indicar cambios que rompen compatibilidad o funciones que se eliminaron y ya no son funcionales.
+6. **Morado (Purple)**: `<Badge variant="purple">Recomendado</Badge>` — Para indicar qué funciones, paquetes o enfoques se recomiendan usar y cuáles no.
+
+## Ejemplo en Títulos
+
+Puedes colocar el badge directamente a un lado del título en Markdown:
+
+```mdx
+# Instalación <Badge variant="success">Nuevo</Badge>
+```
+
+Toma todo el estilo del título y permanece alineado al texto de forma correcta.
+
+## Badges en el Sidebar
+
+En tu archivo de configuración `docs.ts`, también puedes añadir etiquetas a los enlaces del Sidebar enviando los atributos `badge` y `badgeVariant`:
+
+```ts
+{ 
+  title: 'Instalación', 
+  href: '/docs/installation', 
+  badge: 'Nuevo', 
+  badgeVariant: 'success' 
+}
+```

@@ -2,6 +2,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { getDocsConfig } from "@/config/docs";
+import { badgeStyles, BadgeVariant } from "./mdx/Badge";
 
 export function SidebarLeft() {
   const pathname = usePathname();
@@ -31,7 +32,7 @@ export function SidebarLeft() {
                     >
                       <span className="truncate">{item.title}</span>
                       {item.badge && (
-                        <span className="shrink-0 ml-2 rounded-md bg-accent/10 border border-accent/20 px-1.5 py-0.5 text-[10px] font-bold leading-none text-accent">
+                        <span className={`shrink-0 ml-2 rounded-md px-1.5 py-0.5 text-[10px] font-bold leading-none ${badgeStyles[(item.badgeVariant as BadgeVariant) || 'default']}`}>
                           {item.badge}
                         </span>
                       )}
