@@ -5,6 +5,7 @@ import { SidebarRight } from "@/components/SidebarRight";
 import { components } from "@/components/MDXComponents";
 import rehypeSlug from "rehype-slug";
 import rehypePrettyCode from "rehype-pretty-code";
+import remarkGfm from "remark-gfm";
 import { DocsFooter } from "@/components/DocsFooter";
 import { getDocsConfig } from "@/config/docs";
 
@@ -36,6 +37,7 @@ export default async function DocPage({ params }: { params: Promise<{ slug?: str
               components={components as any}
               options={{
                 mdxOptions: {
+                  remarkPlugins: [remarkGfm],
                   rehypePlugins: [
                     rehypeSlug,
                     [rehypePrettyCode as any, { 

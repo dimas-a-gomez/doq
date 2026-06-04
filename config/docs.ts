@@ -1,4 +1,4 @@
-import { Rocket, Box } from "lucide-react";
+import { Rocket, Box, Braces } from "lucide-react";
 
 export function getDocsConfig() {
   return [
@@ -15,6 +15,18 @@ export function getDocsConfig() {
       icon: Box,
       items: [
         { title: 'Botón', href: '/docs/components/button' },
+      ]
+    },
+    {
+      title: 'Shortcodes',
+      icon: Braces,
+      items: [
+        { title: 'Avisos', href: '/docs/shortcodes/avisos' },
+        { title: 'Botones', href: '/docs/shortcodes/botones' },
+        { title: 'Código', href: '/docs/shortcodes/codigo' },
+        { title: 'Columnas', href: '/docs/shortcodes/columnas' },
+        { title: 'Enlace de página', href: '/docs/shortcodes/enlace-de-pagina' },
+        { title: 'Tablas', href: '/docs/shortcodes/tablas' },
       ]
     }
   ];
