@@ -17,6 +17,7 @@ export function getDocsConfig() {
       icon: Box,
       items: [
         { title: 'Botón', href: '/docs/components/button' },
+        { title: 'Menú Lateral', href: '/docs/components/sidebar' },
       ]
     },
     {

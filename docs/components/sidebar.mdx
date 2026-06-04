@@ -1,0 +1,74 @@
+---
+date: "4 de Junio de 2026"
+author: "Dimas A. Gómez"
+---
+
+# Menú Lateral (Sidebar)
+
+Una de las primeras cosas que querrás hacer al configurar DOQMEN es estructurar tu menú lateral (o sidebar). Este menú es la principal vía de navegación de toda tu documentación.
+
+Toda la configuración del menú lateral se encuentra centralizada en un solo archivo: `config/docs.ts`.
+
+## Estructura de `config/docs.ts`
+
+El menú lateral se compone de un arreglo de objetos, donde cada objeto representa una **Sección principal** que puede estar acompañada de un icono. A su vez, cada sección tiene una propiedad `items` que contiene los enlaces a las páginas de esa sección.
+
+### Ejemplo de Configuración
+
+Así es como se ve la estructura dentro del archivo `config/docs.ts`:
+
+```tsx
+import { Rocket, Box, Braces } from "lucide-react";
+
+export function getDocsConfig() {
+  return [
+    {
+      title: 'Comenzando',
+      icon: Rocket,
+      items: [
+        { title: 'Introducción', href: '/docs' },
+        { title: 'Instalación', href: '/docs/installation', badge: 'Nuevo', badgeVariant: 'success' },
+      ]
+    },
+    // ... más secciones
+  ];
+}
+```
+
+<Aviso type="info" title="Importación de Iconos">
+  Nota que los iconos (como `Rocket`, `Box`, o `Braces`) **deben** ser importados desde la biblioteca `lucide-react` en la parte superior del archivo antes de poder pasarlos a la propiedad `icon` de cualquier sección. Esto garantiza que el sistema renderice los SVG correctamente.
+</Aviso>
+
+## Anatomía de una Sección
+
+### Propiedades de Sección
+
+| Propiedad | Tipo | Descripción |
+| :--- | :--- | :--- |
+| `title` | `string` | Título del grupo o sección (ej. "Comenzando", "Componentes"). |
+| `icon` | `LucideIcon` | Icono decorativo opcional extraído de `lucide-react`. |
+| `items` | `array` | Arreglo de los enlaces (páginas) correspondientes a esta sección. |
+
+### Propiedades de Enlaces (`items`)
+
+Cada objeto dentro del arreglo `items` define una página documentada:
+
+| Propiedad | Tipo | Descripción |
+| :--- | :--- | :--- |
+| `title` | `string` | Título del enlace que se mostrará en el menú lateral. |
+| `href` | `string` | La ruta de la página que coincide con los archivos en `/app/docs/...` o tu carpeta de MDXs. Por lo general inicia con `/docs/...`. |
+| `badge` | `string` | *(Opcional)* Texto para una etiqueta que destaca el elemento (útil para indicar "Nuevo" o "Beta"). |
+| `badgeVariant` | `string` | *(Opcional)* Color del badge. Valores comunes: `default`, `success`, `warning`, `error`. |
+
+## ¿Cómo añadir una página nueva?
+
+1. Dirígete a la carpeta `/docs` (o `/app/docs/...` según tu sistema) y crea tu archivo `.mdx`. Ejemplo: `/docs/mi-pagina.mdx`.
+2. Abre el archivo `config/docs.ts`.
+3. Escoge la sección en donde deseas colocar la página (puedes crear una nueva copiando la estructura de bloque).
+4. Agrega el objeto con su título y la ruta (`href`) a tu archivo:
+
+```tsx
+{ title: 'Mi Nueva Página', href: '/docs/mi-pagina' }
+```
+
+5. ¡Guarda! El menú de navegación se actualizará automáticamente y resaltará el enlace de acuerdo a la página activa en ese momento.
