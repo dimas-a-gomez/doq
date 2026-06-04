@@ -42,6 +42,18 @@ export const components = {
   h4: createHeading("h4"),
   h5: createHeading("h5"),
   h6: createHeading("h6"),
+  code: ({ className, ...props }: any) => {
+    const isInline = !props["data-language"] && !props["data-theme"] && !className?.includes("language-");
+    if (isInline) {
+      return (
+        <code
+          className={`font-mono text-accent bg-black/10 dark:bg-white/10 px-1.5 py-0.5 rounded-md text-[0.875em] before:content-none after:content-none ${className || ""}`}
+          {...props}
+        />
+      );
+    }
+    return <code className={className} {...props} />;
+  },
   table: (props: any) => <div className="overflow-x-auto my-8 rounded-xl border border-black/10 dark:border-white/10"><table className="w-full border-collapse text-left text-sm" {...props} /></div>,
   thead: (props: any) => <thead className="bg-[#F0F0F0] dark:bg-[#262626]" {...props} />,
   th: (props: any) => <th className="p-4 font-bold border-b border-black/10 dark:border-white/10" {...props} />,
