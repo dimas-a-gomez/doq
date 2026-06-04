@@ -5,8 +5,36 @@ author: "Dimas A. Gómez"
 
 # Botones
 
-Los botones en el cuerpo de texto se utilizan para llamar la atención a las acciones.
-Existen dos variantes por defecto: `primary` y `secondary`.
+El shortcode `<Boton />` te permite insertar botones estilizados e interactivos directamente dentro de tu contenido Markdown. 
 
-<Boton href="#">Botón Principal</Boton>
-<Boton href="#" variant="secondary">Botón Secundario</Boton>
+A diferencia de un simple enlace de texto (`[mi enlace](...)`), los botones se utilizan para atraer la atención del lector hacia "Llamadas a la Acción" (CTAs) importantes, como: descargar un repositorio, visitar una referencia clave fuera de la documentación o redirigir a un paso final de un tutorial.
+
+## Variantes Disponibles
+
+El botón viene adaptado en dos estilos visuales para mantener un orden o jerarquía de acciones:
+
+- **Primaria (Por defecto):** Utiliza colores y contrastes fuertes. Perfecta para la única y más importante actividad en un bloque de texto.
+- **Secundaria:** Una sutil caja semi-opaca. Ideal para un enlace secundario que acompaña a la acción primaria o lecturas menos urgentes.
+
+## Ejemplo de Visualización
+
+<div className="flex gap-4 my-8">
+  <Boton href="#">Botón Principal</Boton>
+  <Boton href="#" variant="secondary">Botón Secundario</Boton>
+</div>
+
+## Código MDX
+
+Para colocar botones en la documentación, únicamente invocas el shortcode `<Boton>` pasando el enlace en la propiedad `href`. Si deseas la variante secundaria adicional, pasas la regla `variant="secondary"`.
+
+```mdx
+{/* Botón Principal */}
+<Boton href="https://github.com/tu-usuario/doqmen">
+  Descargar desde GitHub
+</Boton>
+
+{/* Botón Secundario */}
+<Boton href="/docs/installation" variant="secondary">
+  O regresar a la Instalación
+</Boton>
+```

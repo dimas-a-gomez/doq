@@ -5,15 +5,51 @@ author: "Dimas A. Gómez"
 
 # Columnas
 
-El componente `Columnas` te ayuda a acomodar contenido en forma de rejilla o columnas. Generalmente útil para mostrar dos elementos paralelos.
+El shortcode `<Columnas />` te permite romper la linealidad del texto y organizar tu contenido en cuadrículas responsivas. Es especialmente útil cuando quieres comparar dos elementos uno al lado del otro, mostrar pros y contras, o presentar una serie de opciones sin que ocupen demasiado espacio vertical.
+
+## ¿Cómo funciona?
+
+El sistema de columnas en DOQMEN es inteligente y completamente responsivo (construido con Tailwind Grid). No tienes que preocuparte por indicarle manualmente el tamaño a cada espacio. 
+
+- **Dispositivos Móviles:** Todo el contenido colapsará de forma segura, mostrándose un bloque debajo del otro para garantizar una lectura cómoda sin tener que hacer *scroll* horizontal.
+- **Pantallas Grandes:** Las columnas se posicionarán en una misma fila horizontal, compartiendo equitativamente el ancho disponible de la página.
+
+## Ejemplo de Visualización
 
 <Columnas>
   <Col>
-    <Boton href="#">Elemento 1</Boton>
-    Este es el contenido de la primera columna. 
+    ### Lado Izquierdo
+    Este es el contenido de la primera columna. Puedes agregar cualquier tipo de elemento nativo como listas, texto en **negrita**, avisos o botones.
+    
+    <Boton href="#">Botón Izquierdo</Boton>
   </Col>
   <Col>
-    <Boton href="#" variant="secondary">Elemento 2</Boton>
-    Este es el contenido de la segunda columna.
+    ### Lado Derecho
+    Este es el contenido de la segunda columna. Se mantendrá perfectamente alineado con su compañero de la izquierda gracias a su rejilla flexible.
+    
+    <Boton href="#" variant="secondary">Botón Derecho</Boton>
   </Col>
 </Columnas>
+
+## Código MDX
+
+Para empezar a organizar tu contenido en cuadrícula, necesitas dos fragmentos que actúan en pareja:
+- `<Columnas>`: Funciona como el encapsulador transparente o contenedor general.
+- `<Col>`: Representa cada "bloque" independiente. Agrega tantas etiquetas `<Col>` como cajones necesites repartir dentro de `<Columnas>`.
+
+```mdx
+<Columnas>
+  <Col>
+    ### Lado Izquierdo
+    Este es el contenido de la primera columna. Puedes agregar cualquier tipo de elemento de Markdown.
+    
+    <Boton href="#">Botón Izquierdo</Boton>
+  </Col>
+  <Col>
+    ### Lado Derecho
+    Este es el contenido de la segunda columna. Se mantendrá perfectamente alineado con su compañero.
+    
+    <Boton href="#" variant="secondary">Botón Derecho</Boton>
+  </Col>
+</Columnas>
+```

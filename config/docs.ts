@@ -20,13 +20,6 @@ export function getDocsConfig() {
       ]
     },
     {
-      title: 'Otro',
-      icon: Aperture,
-      items: [
-        { title: 'Other', href: '/docs/otro/other' },
-      ]
-    },
-    {
       title: 'Shortcodes',
       icon: Braces,
       items: [

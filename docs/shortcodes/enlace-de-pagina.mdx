@@ -3,10 +3,46 @@ date: "4 de Junio de 2026"
 author: "Dimas A. Gómez"
 ---
 
-# Enlace de página
+# Enlaces de Página
 
-Un `EnlacePagina` sirve como tarjeta para dirigir al lector a una sección relacionada con descripción extensa.
+El shortcode `<EnlacePagina />` es un componente interactivo en forma de tarjeta diseñado para dirigir al lector a otras secciones de la documentación de una manera elegante y descriptiva.
 
-<EnlacePagina href="/docs" title="Introducción" description="Aprende los fundamentos y empieza con la base principal." />
+A diferencia de un enlace de texto plano en Markdown, un Enlace de Página invita al usuario a seguir su recorrido de aprendizaje mostrándole un título claro, un icono representativo y una breve descripción de lo que encontrará si hace clic.
 
-<EnlacePagina href="/docs/installation" title="Instalación" description="Guía paso a paso para la instalación en tu entorno." />
+## Cuándo Utilizarlo
+
+Este componente es ideal para indicar el "Siguiente paso" al final de un artículo o para recomendar lecturas relacionadas de peso. Cuando requieras exponer múltiples opciones (como un HUB), te aconsejamos combinarlo anidándolo dentro del shortcode [`<Columnas>`](/docs/shortcodes/columnas) para conformar un Explorador Visual.
+
+## Ejemplo de Visualización
+
+<div className="flex flex-col gap-4 my-8">
+  <EnlacePagina 
+    href="/docs" 
+    title="Introducción" 
+    description="Aprende los fundamentos de DOQMEN y empieza a entender la estructura principal." 
+  />
+
+  <EnlacePagina 
+    href="/docs/installation" 
+    title="Instalación" 
+    description="Sigue la guía paso a paso para instalar y desplegar el proyecto en tu propio entorno." 
+  />
+</div>
+
+## Código MDX
+
+Para implementar esta tarjeta, posiciona una etiqueta `<EnlacePagina />` proporcionando su enlace de destino (`href`), la cabecera prominente (`title`), y la frase resumen (`description`). 
+
+```mdx
+<EnlacePagina 
+  href="/docs" 
+  title="Introducción" 
+  description="Aprende los fundamentos de DOQMEN y empieza a entender la estructura principal." 
+/>
+
+<EnlacePagina 
+  href="/docs/installation" 
+  title="Instalación" 
+  description="Sigue la guía paso a paso para instalar y desplegar el proyecto en tu propio entorno." 
+/>
+```

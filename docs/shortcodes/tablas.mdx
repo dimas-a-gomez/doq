@@ -5,10 +5,32 @@ author: "Dimas A. Gómez"
 
 # Tablas
 
-Para las tablas utilizamos Markdown por defecto. Estas tablas se adaptarán automáticamente al ancho.
+Para presentar datos estructurados o describir propiedades de un componente, DOQMEN soporta el formato nativo de tablas de Markdown. 
 
-| Propiedad | Tipo     | Descripción                      |
-| --------- | -------- | -------------------------------- |
-| className | `string` | Clases CSS a aplicar             |
-| variant   | `string` | Variante o estilo del botón      |
-| disabled  | `boolean`| Define si el estado se deshabilita|
+A diferencia de una simple tabla de HTML estandar, DOQMEN asegura que se adapten visualmente y en anchura, cuidando los recuadros de la cuadrícula con separadores sutiles de Tailwind, siendo completamente funcionales en modo nocturno sin estropear los colores.
+
+## Ejemplo de Visualización
+
+| Propiedad | Tipo | Descripción |
+| :--- | :--- | :--- |
+| `className` | `string` | Agregar clases adicionales de Tailwind al mismo componente. |
+| `variant` | `string` | Escoge una de las posibles variantes según el diseño indicado. |
+| `disabled` | `boolean` | Alterna o define un bloqueo visual de estado si este se deshabilita. |
+| `children` | `React.ReactNode` | Elementos de React que se pasarán al interior del mismo. |
+
+## Código MDX
+
+La sintaxis nativa consiste en usar las tuberías o barras verticales (`|`) para separar las columnas, y guiones (`-`) para diferenciar la cabecera del cuerpo de la tabla.
+
+<Aviso type="info" title="Alineación">
+Si notas, hemos utilizado los dos puntos (`:`) a un lado de los guiones de cabecera (`:---`) para forzar que el texto quede alineado hacia la izquierda.
+</Aviso>
+
+```mdx
+| Propiedad | Tipo | Descripción |
+| :--- | :--- | :--- |
+| `className` | `string` | Agregar clases adicionales de Tailwind al mismo componente. |
+| `variant` | `string` | Escoge una de las posibles variantes según el diseño indicado. |
+| `disabled` | `boolean` | Alterna o define un bloqueo visual de estado si este se deshabilita. |
+| `children` | `React.ReactNode` | Elementos de React que se pasarán al interior del mismo. |
+```

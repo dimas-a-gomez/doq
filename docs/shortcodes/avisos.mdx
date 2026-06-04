@@ -3,10 +3,20 @@ date: "4 de Junio de 2026"
 author: "Dimas A. Gómez"
 ---
 
-# Avisos
+# Avisos (Callouts)
 
-Los avisos te permiten destacar información importante dentro de tu documentación.
-Admiten cuatro variantes de colores.
+El shortcode `<Aviso />` se utiliza para destacar información importante dentro de tu documentación. Estos bloques rompen con el flujo regular del texto llamando la atención del lector hacia notas clave, advertencias o consejos útiles, asegurando que los usuarios no pasen por alto detalles críticos.
+
+## Variantes Disponibles
+
+El componente de avisos admite cuatro "intenciones" visuales, que cambian el color y el icono del bloque según el mensaje:
+
+- **Info (`info`)**: Útil para dar notas de texto normales, curiosidades y aclaraciones informativas.
+- **Advertencia (`warning`)**: Ideal para denotar precaución, recordar un cambio importante o advertir sobre un posible inconveniente.
+- **Éxito (`success`)**: Puedes usarlo para confirmar que un proceso finaliza con algo que funciona correctamente, o señalar un camino preferido.
+- **Error (`error`)**: Resalta algo que está obsoleto, roto, que provoca un quiebre en el código o que el desarrollo requiere de extrema precaución.
+
+## Ejemplo de Visualización
 
 <Aviso type="info" title="Información">
 Este es un mensaje de información. Útil para resaltar notas importantes o aclaraciones.
@@ -23,3 +33,13 @@ Este es un mensaje de éxito. Puedes usarlo para confirmar que algo funciona cor
 <Aviso type="error" title="Error">
 Este es un mensaje de error. Resalta algo que está obsoleto, roto, o que no debería hacerse.
 </Aviso>
+
+## Código MDX
+
+Para utilizar este bloque en tu documentación, invoca la etiqueta `<Aviso>`, indica su tipo (`type`) y pon el título que desees (`title`). Dentro de las etiquetas, puedes colocar el Markdown que prefieras de forma nativa.
+
+```mdx
+<Aviso type="info" title="Nota del desarrollador">
+  Aquí puedes escribir tu contenido. Soporta **negritas**, _cursivas_ o [enlaces](#) sin problema.
+</Aviso>
+```

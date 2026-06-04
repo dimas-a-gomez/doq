@@ -3,18 +3,60 @@ date: "4 de Junio de 2026"
 author: "Dimas A. Gómez"
 ---
 
-# Código
+# Bloques de Código
 
-Para bloques de código utilizamos la sintaxis estándar de Markdown.
+Mostrar porciones de código de manera legible es indispensable en cualquier documentación de software. DOQMEN trae un soporte elegante impulsado por temas con alto contraste y resaltado sintáctico automático usando `rehype-pretty-code`.
 
-```javascript
-export default function Home() {
+## Código en Línea
+
+Para resaltar el nombre de una variable, una instrucción, o un comando corto dentro de un mismo párrafo, simplemente encierra el texto entre un solo acento grave (\` \`).
+
+**Visualización:** Por ejemplo, puedes correr `npm install` o modificar el `<Boton />`.
+
+Al usar este método, DOQMEN automáticamente le aplicará una fuente monoespaciada con un fondo sutil semitransparente que se ajusta a la perfección tanto en el modo claro como en el oscuro, sin romper la lectura del párrafo.
+
+## Bloques Multilínea
+
+Cuando necesites explicar un archivo completo, una función de React o un script grande, abre un bloque utilizando **tres acentos graves** seguidos del nombre del lenguaje de programación que estás usando (por ejemplo: `css`, `html`, `bash`, `typescript`).
+
+**Visualización:**
+
+```tsx
+import { useState } from "react";
+
+export default function Contador() {
+  const [cuenta, setCuenta] = useState(0);
+
   return (
-    <div>
-      <h1>Hola Mundo</h1>
-    </div>
-  )
+    <button onClick={() => setCuenta(c => c + 1)}>
+      Se ha hecho clic {cuenta} veces
+    </button>
+  );
 }
 ```
 
-O código en línea como: `npm install react`.
+## ¿Cómo documentar un bloque de código en Markdown?
+
+¡Totalmente! Es como en la película _Inception_ (un bloque dentro de un bloque). 
+
+Para lograr colocar el código de cómo se hace un bloque de código, sin que el Markdown se confunda y te cierre el bloque antes de tiempo, simplemente **envuelve el contenido usando cuatro acentos graves** (` ` ` `) en los bordes exteriores.
+
+Aquí tienes el código de cómo mostramos los bloques multilínea:
+
+````md
+```tsx
+import { useState } from "react";
+
+export default function Contador() {
+  const [cuenta, setCuenta] = useState(0);
+
+  return (
+    <button onClick={() => setCuenta(c => c + 1)}>
+      Se ha hecho clic {cuenta} veces
+    </button>
+  );
+}
+```
+````
+
+¡Y listo! Markdown entenderá que los grupos de 3 acentos graves adentro son solo decoración y usará los 4 acentos exteriores para englobar el bloque entero.

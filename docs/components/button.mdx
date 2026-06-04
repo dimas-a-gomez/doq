@@ -1,15 +1,25 @@
 ---
-date: "3 de Junio de 2026"
+date: "4 de Junio de 2026"
 author: "Dimas A. Gómez"
 ---
 
-# Botón
+# Botón (Componente UI)
 
-Ejemplo de la documentación para un componente sin borde ni sombra de acuerdo con las especificaciones del diseño actual.
+A diferencia del _shortcode_ `<Boton />` que vimos anteriormente (el cual se usa para formatear botones **dentro del contenido Markdown**), esta página sirve como un **ejemplo de cómo documentar componentes React o de UI** para tu propio desarrollo.
+
+DOQMEN es perfecto para documentar librerías de componentes (por ejemplo, aquellos basados en _shadcn/ui_). Aquí te mostramos cómo podrías estructurar la documentación de tus propios componentes:
+
+## Instalación del componente
+
+Dado que estás desarrollando tu propio sistema, primero indicarías cómo agregar este componente a un proyecto.
+
+```bash
+npx shadcn@latest add button
+```
 
 ## Importación
 
-Asegúrate de importar el componente local.
+Luego, enseñarías la importación desde tu archivo local en React.
 
 ```tsx
 import { Button } from "@/components/ui/button";
@@ -22,3 +32,8 @@ export default function Home() {
   );
 }
 ```
+
+## Resumen
+
+- Usa **Shortcodes** (`<Boton />`) para darle vida e interactividad a la documentación de DOQMEN.
+- Usa **Secciones de Componentes** (como esta página) para documentar el código, la API y el uso de los componentes en los proyectos de tu sistema de diseño.
