@@ -5,6 +5,7 @@ import { Aviso } from "./mdx/Aviso";
 import { Boton } from "./mdx/Boton";
 import { EnlacePagina } from "./mdx/EnlacePagina";
 import { Columnas, Col } from "./mdx/Columnas";
+import { Badge } from "./mdx/Badge";
 
 const createHeading = (Tag: "h1" | "h2" | "h3" | "h4" | "h5" | "h6") => {
   const Heading = ({ children, id, ...props }: any) => {
@@ -29,6 +30,7 @@ const createHeading = (Tag: "h1" | "h2" | "h3" | "h4" | "h5" | "h6") => {
 };
 
 export const components = {
+  Badge,
   Aviso,
   Boton,
   EnlacePagina,

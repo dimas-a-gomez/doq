@@ -58,17 +58,22 @@ export function MobileMenu() {
                 <div key={group.title} className="flex flex-col gap-2">
                   <h4 className="font-semibold text-sm text-foreground">{group.title}</h4>
                   <div className="flex flex-col gap-1">
-                    {group.items.map((item) => (
+                    {group.items.map((item: any) => (
                       <Link
                         key={item.href}
                         href={item.href}
-                        className={`text-sm px-2 py-2 rounded-md transition-colors ${
+                        className={`text-sm px-2 py-2 rounded-md transition-colors flex items-center justify-between font-bold ${
                           pathname === item.href
-                            ? "bg-accent/10 text-accent font-medium/10"
-                            : "text-gray-600 dark:text-gray-400 hover:bg-black/5 dark:hover:bg-white/5"
+                            ? "bg-accent/10 text-accent"
+                            : "text-foreground/60 hover:text-foreground hover:bg-black/5 dark:hover:bg-white/5"
                         }`}
                       >
-                        {item.title}
+                        <span className="truncate">{item.title}</span>
+                        {item.badge && (
+                          <span className="shrink-0 ml-2 rounded-md bg-[#183933] px-1.5 py-0.5 text-[10px] font-bold leading-none text-[#5DE4c7]">
+                            {item.badge}
+                          </span>
+                        )}
                       </Link>
                     ))}
                   </div>

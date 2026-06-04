@@ -19,17 +19,22 @@ export function SidebarLeft() {
                   {group.title}
                 </h4>
                 <div className="flex flex-col gap-1">
-                  {group.items.map((item) => (
+                  {group.items.map((item: any) => (
                     <Link
                       key={item.href}
                       href={item.href}
-                      className={`text-sm px-2 py-1.5 rounded-md transition-colors font-bold ${
+                      className={`text-sm px-2 py-1.5 rounded-md transition-colors font-bold flex items-center justify-between ${
                         pathname === item.href
                           ? "bg-accent/10 text-accent"
                           : "text-foreground/60 hover:text-foreground hover:bg-black/5 dark:hover:bg-white/5"
                       }`}
                     >
-                      {item.title}
+                      <span className="truncate">{item.title}</span>
+                      {item.badge && (
+                        <span className="shrink-0 ml-2 rounded-md bg-[#183933] px-1.5 py-0.5 text-[10px] font-bold leading-none text-[#5DE4c7]">
+                          {item.badge}
+                        </span>
+                      )}
                     </Link>
                   ))}
                 </div>
