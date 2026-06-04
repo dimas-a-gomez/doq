@@ -41,7 +41,34 @@ export default async function DocPage({ params }: { params: Promise<{ slug?: str
                   rehypePlugins: [
                     rehypeSlug,
                     [rehypePrettyCode as any, { 
-                      theme: { light: "github-light", dark: "github-dark" },
+                      theme: { 
+                        light: {
+                          name: "custom-light",
+                          type: "light",
+                          colors: {
+                            "editor.foreground": "#000000",
+                            "editor.background": "#F0F0F0",
+                          },
+                          tokenColors: [
+                            { scope: ["keyword", "storage", "variable.language", "entity.name.function", "support.function", "entity.name.type", "entity.name.tag", "entity.other.attribute-name"], settings: { foreground: "#0000BB" } },
+                            { scope: ["string", "constant.numeric", "constant.character", "constant.language"], settings: { foreground: "#006600" } },
+                            { scope: ["variable", "meta", "punctuation", "comment"], settings: { foreground: "#000000" } },
+                          ],
+                        },
+                        dark: {
+                          name: "custom-dark",
+                          type: "dark",
+                          colors: {
+                            "editor.foreground": "#FFFFFF",
+                            "editor.background": "#262626",
+                          },
+                          tokenColors: [
+                            { scope: ["keyword", "storage", "variable.language", "entity.name.function", "support.function", "entity.name.type", "entity.name.tag", "entity.other.attribute-name"], settings: { foreground: "#99CCFF" } },
+                            { scope: ["string", "constant.numeric", "constant.character", "constant.language"], settings: { foreground: "#99FF99" } },
+                            { scope: ["variable", "meta", "punctuation", "comment"], settings: { foreground: "#FFFFFF" } },
+                          ],
+                        }
+                      },
                       keepBackground: false 
                     }]
                   ]
