@@ -1,4 +1,4 @@
-import { Rocket, Box, Braces } from "lucide-react";
+import { Rocket, Box, Braces, Aperture } from "lucide-react";
 
 export function getDocsConfig() {
   return [
