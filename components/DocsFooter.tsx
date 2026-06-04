@@ -47,7 +47,7 @@ export function DocsFooter({ previous, next, frontmatter }: DocsFooterProps) {
           {frontmatter.date ? `Editado: ${frontmatter.date}` : null}
         </div>
         <div>
-          {frontmatter.author ? `Created by ${frontmatter.author}` : null}
+          {frontmatter.author ? `Creado por ${frontmatter.author}` : null}
         </div>
       </div>
     </div>
