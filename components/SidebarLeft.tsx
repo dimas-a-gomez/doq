@@ -31,7 +31,7 @@ export function SidebarLeft() {
                     >
                       <span className="truncate">{item.title}</span>
                       {item.badge && (
-                        <span className="shrink-0 ml-2 rounded-md bg-[#183933] px-1.5 py-0.5 text-[10px] font-bold leading-none text-[#5DE4c7]">
+                        <span className="shrink-0 ml-2 rounded-md bg-accent/10 border border-accent/20 px-1.5 py-0.5 text-[10px] font-bold leading-none text-accent">
                           {item.badge}
                         </span>
                       )}

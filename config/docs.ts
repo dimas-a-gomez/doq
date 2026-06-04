@@ -7,7 +7,9 @@ export function getDocsConfig() {
       icon: Rocket,
       items: [
         { title: 'Introducción', href: '/docs' },
-        { title: 'Instalación', href: '/docs/installation', badge: 'Nuevo' }
+        { title: 'Instalación', href: '/docs/installation', badge: 'Nuevo' },
+        { title: 'Registro de cambios', href: '/docs/changelog' },
+        { title: 'Explorador visual', href: '/docs/explorador-visual' }
       ]
     },
     {
