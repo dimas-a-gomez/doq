@@ -22,8 +22,8 @@ export function Header() {
         </Link>
         <div className="flex items-center gap-2 md:gap-4">
           <Search />
-          <Link href="/docs" className="text-sm font-medium hover:text-accent transition-colors hidden md:block">
-            Documentación
+          <Link href="/docs/changelog" className="font-mono text-[13px] bg-black/5 dark:bg-white/10 px-2 py-1 rounded-md text-foreground/80 hover:text-foreground transition-colors hidden md:block">
+            v1.1.0
           </Link>
           <button
             onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
