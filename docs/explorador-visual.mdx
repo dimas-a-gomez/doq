@@ -5,47 +5,57 @@ author: "Dimas A. Gómez"
 
 # Explorador Visual (Grid/Galería)
 
-Un explorador visual limpia el contenido y lo organiza en una cuadrícula (grid) espaciada. Ayuda a que el usuario previsualice de forma rápida los distintos apartados (como iconos, componentes o guías completas). 
+Un explorador visual es un patrón de diseño que organiza los elementos en una cuadrícula espaciada. Su función es permitirle al usuario previsualizar de forma rápida los distintos apartados (como rutas, componentes o guías) antes de tomar una decisión de a dónde ir.
 
-Efectivamente, esto se logra combinando de manera estructurada los _Enlaces de Página_ dentro de _Columnas_. A continuación, te mostramos un ejemplo de cómo se vería una galería.
+En DOQMEN, este patrón se logra anidando los enlaces interactivos (`<EnlacePagina />`) dentro del shortcode `<Columnas />`, lo que genera una estructura en galería completamente adaptable.
 
-## Galería de Enlaces de Documentación
+## Cuándo Utilizarlo
 
-Esta cuadrícula es perfecta si quieres hacer un "hub" central al principio de una sección para que los usuarios salten rápidamente a sus temas de interés:
+Se recomienda recurrir a este patrón cuando:
+- **Necesitas un "Hub" o Índice Central:** Si tienes una sección general que agrupa varios subtemas, las cuadrículas son perfectas para introducirlos todos.
+- **Quieres evitar saturación textual:** Reemplaza las enormes e infinitas listas con viñetas por bloques interactivos escaneables.
+- **Mejorar la experiencia móvil:** Proporcionas "áreas de toque" grandes, descriptivas y elegantes que facilitan la interacción en dispositivos pequeños.
+
+## Ejemplo de Visualización
+
+Así es como se ve un explorador visual en plena acción dentro de una página:
 
 <Columnas>
   <Col>
     <EnlacePagina 
       title="Opciones de Instalación" 
-      description="Aprende a configurar paso a paso este proyecto base." 
+      description="Aprende a configurar paso a paso este proyecto base de DOQMEN." 
       href="/docs/installation" 
     />
   </Col>
   <Col>
     <EnlacePagina 
       title="Registro de Cambios" 
-      description="Entérate de las últimas versiones, fixes y nuevas funcionalidades." 
+      description="Entérate de las últimas versiones, arreglos y funcionalidades." 
       href="/docs/changelog" 
-    />
-  </Col>
-  <Col>
-    <EnlacePagina 
-      title="Configurando Shortcodes" 
-      description="Aprende a crear tus propios shortcodes interactivos en React." 
-      href="/docs/shortcodes/codigo" 
-    />
-  </Col>
-  <Col>
-    <EnlacePagina 
-      title="Componente Badge" 
-      description="Resalta de forma elegante los estados, etiquetas o tags de versión." 
-      href="/docs/otro/other" 
     />
   </Col>
 </Columnas>
 
-## ¿Por qué utilizar esta vista?
+## Código MDX
 
-1. **Jerarquización:** Permite estructurar módulos en lugar de una lista aburrida vertical.
-2. **Claridad:** El usuario puede escanear más de 4 opciones rápidamente gracias al espacio en blanco.
-3. **Escalabilidad:** Ideal para índices extensos. En móvil se adapta a 1 sola columna y en pantallas grandes en 2 o más.
+Para crear tu propia cuadrícula en cualquier documento, copia y adapta la siguiente estructura. Conforme vayas metiendo nuevas etiquetas `<Col>`, el sistema de columnas se encargará de adaptar su disposición adecuadamente.
+
+```mdx
+<Columnas>
+  <Col>
+    <EnlacePagina 
+      title="Opciones de Instalación" 
+      description="Aprende a configurar paso a paso este proyecto base de DOQMEN." 
+      href="/docs/installation" 
+    />
+  </Col>
+  <Col>
+    <EnlacePagina 
+      title="Registro de Cambios" 
+      description="Entérate de las últimas versiones, arreglos y funcionalidades." 
+      href="/docs/changelog" 
+    />
+  </Col>
+</Columnas>
+```
