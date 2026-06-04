@@ -4,6 +4,7 @@ import { Moon, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 import { MobileMenu } from "./MobileMenu";
+import { Search } from "./Search";
 
 export function Header() {
   const [mounted, setMounted] = useState(false);
@@ -20,6 +21,7 @@ export function Header() {
           DOQMEN
         </Link>
         <div className="flex items-center gap-2 md:gap-4">
+          <Search />
           <Link href="/docs" className="text-sm font-medium hover:text-accent transition-colors hidden md:block">
             Documentación
           </Link>
