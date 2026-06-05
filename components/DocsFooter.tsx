@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowLeft, ArrowRight } from "lucide-react";
+import { ArrowLeft, ArrowRight, Edit } from "lucide-react";
 
 interface DocsFooterProps {
   previous: { title: string; href: string } | null;
@@ -10,6 +10,19 @@ interface DocsFooterProps {
 export function DocsFooter({ previous, next, frontmatter }: DocsFooterProps) {
   return (
     <div className="mt-12 pt-8">
+      {frontmatter.github && (
+        <div className="mb-8">
+          <a
+            href={frontmatter.github}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors"
+          >
+            <Edit className="w-4 h-4" />
+            Editar esta página
+          </a>
+        </div>
+      )}
       <hr className="mb-8 border-black/10 dark:border-white/10" />
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
         {previous ? (
