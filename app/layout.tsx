@@ -5,6 +5,9 @@ import { ThemeProvider } from "@/components/ThemeProvider";
 export const metadata: Metadata = {
   title: "DOQMEN",
   description: "Documentation Site",
+  verification: {
+    google: "poPlwTNJNkrsC4dsGTQIs_8gaRtAxN5tCXcy143p4Gc",
+  },
 };
 
 export default function RootLayout({
