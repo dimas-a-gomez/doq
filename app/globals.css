@@ -68,6 +68,15 @@ hr {
   background: rgba(150, 150, 150, 0.5);
 }
 
+/* Custom Selection Styling */
+::selection {
+  background-color: rgba(0, 0, 0, 0.15);
+}
+
+.dark ::selection {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
 /* Rehype Pretty Code Dual Theme */
 code[data-theme],
 code[data-theme] span {
