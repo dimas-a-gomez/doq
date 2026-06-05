@@ -1,0 +1,532 @@
+[
+  {
+    "id": "/docs/changelog",
+    "title": "changelog",
+    "path": "/docs/changelog",
+    "keywords": [],
+    "content_summary": "Registro de Cambios Todas las actualizaciones notables de DOQMEN se documentarán en esta página. Versión 2.05 <Badge variant=\"accent\">Última</Badge> 5 de Junio de 2026 Añadido - Nuevo soporte para mostrar Tooltips (descripción emergente) en los enlac..."
+  },
+  {
+    "id": "/docs/changelog#versin-205-badge-variantaccentltimabadge",
+    "title": "Versión 2.05 <Badge variant=\"accent\">Última</Badge> - changelog",
+    "path": "/docs/changelog#versin-205-badge-variantaccentltimabadge",
+    "keywords": [
+      "versión 2.05 <badge variant=\"accent\">última</badge>"
+    ],
+    "content_summary": "Sección sobre Versión 2.05 <Badge variant=\"accent\">Última</Badge> en changelog."
+  },
+  {
+    "id": "/docs/changelog#aadido",
+    "title": "Añadido - changelog",
+    "path": "/docs/changelog#aadido",
+    "keywords": [
+      "añadido"
+    ],
+    "content_summary": "Sección sobre Añadido en changelog."
+  },
+  {
+    "id": "/docs/changelog#mejorado",
+    "title": "Mejorado - changelog",
+    "path": "/docs/changelog#mejorado",
+    "keywords": [
+      "mejorado"
+    ],
+    "content_summary": "Sección sobre Mejorado en changelog."
+  },
+  {
+    "id": "/docs/changelog#versin-110-badgeestablebadge",
+    "title": "Versión 1.1.0 <Badge>Estable</Badge> - changelog",
+    "path": "/docs/changelog#versin-110-badgeestablebadge",
+    "keywords": [
+      "versión 1.1.0 <badge>estable</badge>"
+    ],
+    "content_summary": "Sección sobre Versión 1.1.0 <Badge>Estable</Badge> en changelog."
+  },
+  {
+    "id": "/docs/changelog#aadido",
+    "title": "Añadido - changelog",
+    "path": "/docs/changelog#aadido",
+    "keywords": [
+      "añadido"
+    ],
+    "content_summary": "Sección sobre Añadido en changelog."
+  },
+  {
+    "id": "/docs/changelog#mejorado",
+    "title": "Mejorado - changelog",
+    "path": "/docs/changelog#mejorado",
+    "keywords": [
+      "mejorado"
+    ],
+    "content_summary": "Sección sobre Mejorado en changelog."
+  },
+  {
+    "id": "/docs/changelog#versin-100-badgeestablebadge",
+    "title": "Versión 1.0.0 <Badge>Estable</Badge> - changelog",
+    "path": "/docs/changelog#versin-100-badgeestablebadge",
+    "keywords": [
+      "versión 1.0.0 <badge>estable</badge>"
+    ],
+    "content_summary": "Sección sobre Versión 1.0.0 <Badge>Estable</Badge> en changelog."
+  },
+  {
+    "id": "/docs/changelog#aadido",
+    "title": "Añadido - changelog",
+    "path": "/docs/changelog#aadido",
+    "keywords": [
+      "añadido"
+    ],
+    "content_summary": "Sección sobre Añadido en changelog."
+  },
+  {
+    "id": "/docs/components/button",
+    "title": "button",
+    "path": "/docs/components/button",
+    "keywords": [],
+    "content_summary": "Botón (Componente UI) A diferencia del shortcode <Boton /> que vimos anteriormente (el cual se usa para formatear botones dentro del contenido Markdown), esta página sirve como un ejemplo de cómo documentar componentes React o de UI para tu propio de..."
+  },
+  {
+    "id": "/docs/components/button#instalacin-del-componente",
+    "title": "Instalación del componente - button",
+    "path": "/docs/components/button#instalacin-del-componente",
+    "keywords": [
+      "instalación del componente"
+    ],
+    "content_summary": "Sección sobre Instalación del componente en button."
+  },
+  {
+    "id": "/docs/components/button#importacin",
+    "title": "Importación - button",
+    "path": "/docs/components/button#importacin",
+    "keywords": [
+      "importación"
+    ],
+    "content_summary": "Sección sobre Importación en button."
+  },
+  {
+    "id": "/docs/components/button#resumen",
+    "title": "Resumen - button",
+    "path": "/docs/components/button#resumen",
+    "keywords": [
+      "resumen"
+    ],
+    "content_summary": "Sección sobre Resumen en button."
+  },
+  {
+    "id": "/docs/components/sidebar",
+    "title": "sidebar",
+    "path": "/docs/components/sidebar",
+    "keywords": [],
+    "content_summary": "Menú Lateral (Sidebar) Una de las primeras cosas que querrás hacer al configurar DOQMEN es estructurar tu menú lateral (o sidebar). Este menú es la principal vía de navegación de toda tu documentación. Toda la configuración del menú lateral se encuen..."
+  },
+  {
+    "id": "/docs/components/sidebar#estructura-de-configdocsts",
+    "title": "Estructura de `config/docs.ts` - sidebar",
+    "path": "/docs/components/sidebar#estructura-de-configdocsts",
+    "keywords": [
+      "estructura de `config/docs.ts`"
+    ],
+    "content_summary": "Sección sobre Estructura de `config/docs.ts` en sidebar."
+  },
+  {
+    "id": "/docs/components/sidebar#ejemplo-de-configuracin",
+    "title": "Ejemplo de Configuración - sidebar",
+    "path": "/docs/components/sidebar#ejemplo-de-configuracin",
+    "keywords": [
+      "ejemplo de configuración"
+    ],
+    "content_summary": "Sección sobre Ejemplo de Configuración en sidebar."
+  },
+  {
+    "id": "/docs/components/sidebar#anatoma-de-una-seccin",
+    "title": "Anatomía de una Sección - sidebar",
+    "path": "/docs/components/sidebar#anatoma-de-una-seccin",
+    "keywords": [
+      "anatomía de una sección"
+    ],
+    "content_summary": "Sección sobre Anatomía de una Sección en sidebar."
+  },
+  {
+    "id": "/docs/components/sidebar#propiedades-de-seccin",
+    "title": "Propiedades de Sección - sidebar",
+    "path": "/docs/components/sidebar#propiedades-de-seccin",
+    "keywords": [
+      "propiedades de sección"
+    ],
+    "content_summary": "Sección sobre Propiedades de Sección en sidebar."
+  },
+  {
+    "id": "/docs/components/sidebar#propiedades-de-enlaces-items",
+    "title": "Propiedades de Enlaces (`items`) - sidebar",
+    "path": "/docs/components/sidebar#propiedades-de-enlaces-items",
+    "keywords": [
+      "propiedades de enlaces (`items`)"
+    ],
+    "content_summary": "Sección sobre Propiedades de Enlaces (`items`) en sidebar."
+  },
+  {
+    "id": "/docs/components/sidebar#cmo-aadir-una-pgina-nueva",
+    "title": "¿Cómo añadir una página nueva? - sidebar",
+    "path": "/docs/components/sidebar#cmo-aadir-una-pgina-nueva",
+    "keywords": [
+      "¿cómo añadir una página nueva?"
+    ],
+    "content_summary": "Sección sobre ¿Cómo añadir una página nueva? en sidebar."
+  },
+  {
+    "id": "/docs/explorador-visual",
+    "title": "explorador-visual",
+    "path": "/docs/explorador-visual",
+    "keywords": [],
+    "content_summary": "Explorador Visual (Grid/Galería) Un explorador visual es un patrón de diseño que organiza los elementos en una cuadrícula espaciada. Su función es permitirle al usuario previsualizar de forma rápida los distintos apartados (como rutas, componentes o ..."
+  },
+  {
+    "id": "/docs/explorador-visual#cundo-utilizarlo",
+    "title": "Cuándo Utilizarlo - explorador-visual",
+    "path": "/docs/explorador-visual#cundo-utilizarlo",
+    "keywords": [
+      "cuándo utilizarlo"
+    ],
+    "content_summary": "Sección sobre Cuándo Utilizarlo en explorador-visual."
+  },
+  {
+    "id": "/docs/explorador-visual#ejemplo-de-visualizacin",
+    "title": "Ejemplo de Visualización - explorador-visual",
+    "path": "/docs/explorador-visual#ejemplo-de-visualizacin",
+    "keywords": [
+      "ejemplo de visualización"
+    ],
+    "content_summary": "Sección sobre Ejemplo de Visualización en explorador-visual."
+  },
+  {
+    "id": "/docs/explorador-visual#cdigo-mdx",
+    "title": "Código MDX - explorador-visual",
+    "path": "/docs/explorador-visual#cdigo-mdx",
+    "keywords": [
+      "código mdx"
+    ],
+    "content_summary": "Sección sobre Código MDX en explorador-visual."
+  },
+  {
+    "id": "/docs/frontmatter",
+    "title": "frontmatter",
+    "path": "/docs/frontmatter",
+    "keywords": [],
+    "content_summary": "Metadatos (Frontmatter) En cada una de las páginas de tu documentación (archivos .mdx), puedes agregar un bloque especial al inicio llamado Frontmatter. Este bloque sirve para configurar información adicional, también llamados Metadatos, que dotarán ..."
+  },
+  {
+    "id": "/docs/frontmatter#propiedades-disponibles",
+    "title": "Propiedades Disponibles - frontmatter",
+    "path": "/docs/frontmatter#propiedades-disponibles",
+    "keywords": [
+      "propiedades disponibles"
+    ],
+    "content_summary": "Sección sobre Propiedades Disponibles en frontmatter."
+  },
+  {
+    "id": "/docs/frontmatter#el-botn-editar-esta-pgina",
+    "title": "El Botón \"Editar esta página\" - frontmatter",
+    "path": "/docs/frontmatter#el-botn-editar-esta-pgina",
+    "keywords": [
+      "el botón \"editar esta página\""
+    ],
+    "content_summary": "Sección sobre El Botón \"Editar esta página\" en frontmatter."
+  },
+  {
+    "id": "/docs/frontmatter#ejemplo-de-configuracin",
+    "title": "Ejemplo de Configuración - frontmatter",
+    "path": "/docs/frontmatter#ejemplo-de-configuracin",
+    "keywords": [
+      "ejemplo de configuración"
+    ],
+    "content_summary": "Sección sobre Ejemplo de Configuración en frontmatter."
+  },
+  {
+    "id": "/docs",
+    "title": "docs",
+    "path": "/docs",
+    "keywords": [],
+    "content_summary": "Introducción ¡Bienvenido a DOQMEN! Un proyecto base para documentación moderno, limpio y elegante, creado con Next.js, Tailwind CSS y MDX (Markdown). Mantenemos un enfoque puramente visual en el contenido para que puedas crear guías, tutoriales y man..."
+  },
+  {
+    "id": "/docs#caractersticas-principales",
+    "title": "Características Principales - docs",
+    "path": "/docs#caractersticas-principales",
+    "keywords": [
+      "características principales"
+    ],
+    "content_summary": "Sección sobre Características Principales en docs."
+  },
+  {
+    "id": "/docs#siguiente-paso",
+    "title": "Siguiente Paso - docs",
+    "path": "/docs#siguiente-paso",
+    "keywords": [
+      "siguiente paso"
+    ],
+    "content_summary": "Sección sobre Siguiente Paso en docs."
+  },
+  {
+    "id": "/docs/installation",
+    "title": "installation",
+    "path": "/docs/installation",
+    "keywords": [],
+    "content_summary": "Instalación <Badge variant=\"success\">Nuevo</Badge> Aquí encontrarás la guía para instalar y arrancar la aplicación de documentación. Requisitos Previos - Node.js 18.17 o versiones superiores. - Gestor de paquetes: npm, yarn o pnpm Instalar dependenci..."
+  },
+  {
+    "id": "/docs/installation#requisitos-previos",
+    "title": "Requisitos Previos - installation",
+    "path": "/docs/installation#requisitos-previos",
+    "keywords": [
+      "requisitos previos"
+    ],
+    "content_summary": "Sección sobre Requisitos Previos en installation."
+  },
+  {
+    "id": "/docs/installation#instalar-dependencias",
+    "title": "Instalar dependencias - installation",
+    "path": "/docs/installation#instalar-dependencias",
+    "keywords": [
+      "instalar dependencias"
+    ],
+    "content_summary": "Sección sobre Instalar dependencias en installation."
+  },
+  {
+    "id": "/docs/installation#iniciar-servidor-de-desarrollo",
+    "title": "Iniciar servidor de desarrollo - installation",
+    "path": "/docs/installation#iniciar-servidor-de-desarrollo",
+    "keywords": [
+      "iniciar servidor de desarrollo"
+    ],
+    "content_summary": "Sección sobre Iniciar servidor de desarrollo en installation."
+  },
+  {
+    "id": "/docs/shortcodes/avisos",
+    "title": "avisos",
+    "path": "/docs/shortcodes/avisos",
+    "keywords": [],
+    "content_summary": "Avisos (Callouts) El shortcode <Aviso /> se utiliza para destacar información importante dentro de tu documentación. Estos bloques rompen con el flujo regular del texto llamando la atención del lector hacia notas clave, advertencias o consejos útiles..."
+  },
+  {
+    "id": "/docs/shortcodes/avisos#variantes-disponibles",
+    "title": "Variantes Disponibles - avisos",
+    "path": "/docs/shortcodes/avisos#variantes-disponibles",
+    "keywords": [
+      "variantes disponibles"
+    ],
+    "content_summary": "Sección sobre Variantes Disponibles en avisos."
+  },
+  {
+    "id": "/docs/shortcodes/avisos#ejemplo-de-visualizacin",
+    "title": "Ejemplo de Visualización - avisos",
+    "path": "/docs/shortcodes/avisos#ejemplo-de-visualizacin",
+    "keywords": [
+      "ejemplo de visualización"
+    ],
+    "content_summary": "Sección sobre Ejemplo de Visualización en avisos."
+  },
+  {
+    "id": "/docs/shortcodes/avisos#cdigo-mdx",
+    "title": "Código MDX - avisos",
+    "path": "/docs/shortcodes/avisos#cdigo-mdx",
+    "keywords": [
+      "código mdx"
+    ],
+    "content_summary": "Sección sobre Código MDX en avisos."
+  },
+  {
+    "id": "/docs/shortcodes/badges",
+    "title": "badges",
+    "path": "/docs/shortcodes/badges",
+    "keywords": [],
+    "content_summary": "Badges (Etiquetas) El componente <Badge /> permite resaltar estados, etiquetas o versiones tanto en los títulos como en el contenido. Soporta colores diferentes según la intención o importancia del mensaje. Variantes Disponibles Puedes utilizar la pr..."
+  },
+  {
+    "id": "/docs/shortcodes/badges#variantes-disponibles",
+    "title": "Variantes Disponibles - badges",
+    "path": "/docs/shortcodes/badges#variantes-disponibles",
+    "keywords": [
+      "variantes disponibles"
+    ],
+    "content_summary": "Sección sobre Variantes Disponibles en badges."
+  },
+  {
+    "id": "/docs/shortcodes/badges#ejemplo-en-ttulos",
+    "title": "Ejemplo en Títulos - badges",
+    "path": "/docs/shortcodes/badges#ejemplo-en-ttulos",
+    "keywords": [
+      "ejemplo en títulos"
+    ],
+    "content_summary": "Sección sobre Ejemplo en Títulos en badges."
+  },
+  {
+    "id": "/docs/shortcodes/badges#badges-en-el-sidebar",
+    "title": "Badges en el Sidebar - badges",
+    "path": "/docs/shortcodes/badges#badges-en-el-sidebar",
+    "keywords": [
+      "badges en el sidebar"
+    ],
+    "content_summary": "Sección sobre Badges en el Sidebar en badges."
+  },
+  {
+    "id": "/docs/shortcodes/botones",
+    "title": "botones",
+    "path": "/docs/shortcodes/botones",
+    "keywords": [],
+    "content_summary": "Botones El shortcode <Boton /> te permite insertar botones estilizados e interactivos directamente dentro de tu contenido Markdown.  A diferencia de un simple enlace de texto (mi enlace), los botones se utilizan para atraer la atención del lector hac..."
+  },
+  {
+    "id": "/docs/shortcodes/botones#variantes-disponibles",
+    "title": "Variantes Disponibles - botones",
+    "path": "/docs/shortcodes/botones#variantes-disponibles",
+    "keywords": [
+      "variantes disponibles"
+    ],
+    "content_summary": "Sección sobre Variantes Disponibles en botones."
+  },
+  {
+    "id": "/docs/shortcodes/botones#ejemplo-de-visualizacin",
+    "title": "Ejemplo de Visualización - botones",
+    "path": "/docs/shortcodes/botones#ejemplo-de-visualizacin",
+    "keywords": [
+      "ejemplo de visualización"
+    ],
+    "content_summary": "Sección sobre Ejemplo de Visualización en botones."
+  },
+  {
+    "id": "/docs/shortcodes/botones#cdigo-mdx",
+    "title": "Código MDX - botones",
+    "path": "/docs/shortcodes/botones#cdigo-mdx",
+    "keywords": [
+      "código mdx"
+    ],
+    "content_summary": "Sección sobre Código MDX en botones."
+  },
+  {
+    "id": "/docs/shortcodes/codigo",
+    "title": "codigo",
+    "path": "/docs/shortcodes/codigo",
+    "keywords": [],
+    "content_summary": "Bloques de Código Mostrar porciones de código de manera legible es indispensable en cualquier documentación de software. DOQMEN trae un soporte elegante impulsado por temas con alto contraste y resaltado sintáctico automático usando rehype-pretty-cod..."
+  },
+  {
+    "id": "/docs/shortcodes/codigo#cdigo-en-lnea",
+    "title": "Código en Línea - codigo",
+    "path": "/docs/shortcodes/codigo#cdigo-en-lnea",
+    "keywords": [
+      "código en línea"
+    ],
+    "content_summary": "Sección sobre Código en Línea en codigo."
+  },
+  {
+    "id": "/docs/shortcodes/codigo#bloques-multilnea",
+    "title": "Bloques Multilínea - codigo",
+    "path": "/docs/shortcodes/codigo#bloques-multilnea",
+    "keywords": [
+      "bloques multilínea"
+    ],
+    "content_summary": "Sección sobre Bloques Multilínea en codigo."
+  },
+  {
+    "id": "/docs/shortcodes/codigo#cmo-documentar-un-bloque-de-cdigo-en-markdown",
+    "title": "¿Cómo documentar un bloque de código en Markdown? - codigo",
+    "path": "/docs/shortcodes/codigo#cmo-documentar-un-bloque-de-cdigo-en-markdown",
+    "keywords": [
+      "¿cómo documentar un bloque de código en markdown?"
+    ],
+    "content_summary": "Sección sobre ¿Cómo documentar un bloque de código en Markdown? en codigo."
+  },
+  {
+    "id": "/docs/shortcodes/columnas",
+    "title": "columnas",
+    "path": "/docs/shortcodes/columnas",
+    "keywords": [],
+    "content_summary": "Columnas El shortcode <Columnas /> te permite romper la linealidad del texto y organizar tu contenido en cuadrículas responsivas. Es especialmente útil cuando quieres comparar dos elementos uno al lado del otro, mostrar pros y contras, o presentar un..."
+  },
+  {
+    "id": "/docs/shortcodes/columnas#cmo-funciona",
+    "title": "¿Cómo funciona? - columnas",
+    "path": "/docs/shortcodes/columnas#cmo-funciona",
+    "keywords": [
+      "¿cómo funciona?"
+    ],
+    "content_summary": "Sección sobre ¿Cómo funciona? en columnas."
+  },
+  {
+    "id": "/docs/shortcodes/columnas#ejemplo-de-visualizacin",
+    "title": "Ejemplo de Visualización - columnas",
+    "path": "/docs/shortcodes/columnas#ejemplo-de-visualizacin",
+    "keywords": [
+      "ejemplo de visualización"
+    ],
+    "content_summary": "Sección sobre Ejemplo de Visualización en columnas."
+  },
+  {
+    "id": "/docs/shortcodes/columnas#cdigo-mdx",
+    "title": "Código MDX - columnas",
+    "path": "/docs/shortcodes/columnas#cdigo-mdx",
+    "keywords": [
+      "código mdx"
+    ],
+    "content_summary": "Sección sobre Código MDX en columnas."
+  },
+  {
+    "id": "/docs/shortcodes/enlace-de-pagina",
+    "title": "enlace-de-pagina",
+    "path": "/docs/shortcodes/enlace-de-pagina",
+    "keywords": [],
+    "content_summary": "Enlaces de Página El shortcode <EnlacePagina /> es un componente interactivo en forma de tarjeta diseñado para dirigir al lector a otras secciones de la documentación de una manera elegante y descriptiva. A diferencia de un enlace de texto plano en M..."
+  },
+  {
+    "id": "/docs/shortcodes/enlace-de-pagina#cundo-utilizarlo",
+    "title": "Cuándo Utilizarlo - enlace-de-pagina",
+    "path": "/docs/shortcodes/enlace-de-pagina#cundo-utilizarlo",
+    "keywords": [
+      "cuándo utilizarlo"
+    ],
+    "content_summary": "Sección sobre Cuándo Utilizarlo en enlace-de-pagina."
+  },
+  {
+    "id": "/docs/shortcodes/enlace-de-pagina#ejemplo-de-visualizacin",
+    "title": "Ejemplo de Visualización - enlace-de-pagina",
+    "path": "/docs/shortcodes/enlace-de-pagina#ejemplo-de-visualizacin",
+    "keywords": [
+      "ejemplo de visualización"
+    ],
+    "content_summary": "Sección sobre Ejemplo de Visualización en enlace-de-pagina."
+  },
+  {
+    "id": "/docs/shortcodes/enlace-de-pagina#cdigo-mdx",
+    "title": "Código MDX - enlace-de-pagina",
+    "path": "/docs/shortcodes/enlace-de-pagina#cdigo-mdx",
+    "keywords": [
+      "código mdx"
+    ],
+    "content_summary": "Sección sobre Código MDX en enlace-de-pagina."
+  },
+  {
+    "id": "/docs/shortcodes/tablas",
+    "title": "tablas",
+    "path": "/docs/shortcodes/tablas",
+    "keywords": [],
+    "content_summary": "Tablas Para presentar datos estructurados o describir propiedades de un componente, DOQMEN soporta el formato nativo de tablas de Markdown.  A diferencia de una simple tabla de HTML estandar, DOQMEN asegura que se adapten visualmente y en anchura, cu..."
+  },
+  {
+    "id": "/docs/shortcodes/tablas#ejemplo-de-visualizacin",
+    "title": "Ejemplo de Visualización - tablas",
+    "path": "/docs/shortcodes/tablas#ejemplo-de-visualizacin",
+    "keywords": [
+      "ejemplo de visualización"
+    ],
+    "content_summary": "Sección sobre Ejemplo de Visualización en tablas."
+  },
+  {
+    "id": "/docs/shortcodes/tablas#cdigo-mdx",
+    "title": "Código MDX - tablas",
+    "path": "/docs/shortcodes/tablas#cdigo-mdx",
+    "keywords": [
+      "código mdx"
+    ],
+    "content_summary": "Sección sobre Código MDX en tablas."
+  }
+]
