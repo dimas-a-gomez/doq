@@ -1,0 +1,44 @@
+---
+date: "4 de Junio de 2026"
+author: "Dimas A. Gómez"
+---
+
+# Metadatos (Frontmatter)
+
+En cada una de las páginas de tu documentación (archivos `.mdx`), puedes agregar un bloque especial al inicio llamado **Frontmatter**. Este bloque sirve para configurar información adicional, también llamados **Metadatos**, que dotarán a la página de funcionalidades extra o créditos de autoría.
+
+El Frontmatter siempre debe escribirse al **inicio exacto del archivo**, y tiene que estar entre tres guiones `---`.
+
+## Propiedades Disponibles
+
+En DOQMEN hemos preparado tres variables principales (todas opcionales) que puedes colocar allí:
+
+| Propiedad | Tipo | Descripción |
+| :--- | :--- | :--- |
+| `author` | `string` | Nombre de la persona que escribió la página. Se mostrará en el pie de página ("Creado por..."). |
+| `date` | `string` | Fecha de creación o de la última edición (ej. "4 de Junio de 2026"). |
+| `github` | `string` | Enlace completo hacia el archivo específico de esa página en tu repositorio de GitHub. Habilita el botón **"Editar esta página"**. |
+
+## El Botón "Editar esta página"
+
+Una funcionalidad muy solicitada en sistemas de documentación es permitir a los usuarios de tu comunidad o equipo proponer cambios rápicos a un artículo. 
+
+Para habilitar un botón de **"Editar esta página"** (acompañado de un bonito icono en el pie de página), simplemente debes añadir la propiedad `github` y pasarle la URL absoluta hacia el archivo correspondiente dentro de tu repositorio (ya sea público o privado).
+
+### Ejemplo de Configuración
+
+Si estuviéramos editando la página de Introducción, nuestro inicio del archivo se vería así:
+
+```mdx
+---
+date: "4 de Junio de 2026"
+author: "Dimas A. Gómez"
+github: "https://github.com/tu-usuario/doqmen/blob/main/docs/index.mdx"
+---
+
+# Introducción
+
+El contenido de tu página comienza aquí...
+```
+
+Notarás que al final del artículo, justo arriba de los botones de navegación (Siguiente / Anterior), aparecerá de manera elegante y sutil el botón para que cualquier persona que acceda sea redirigida al editor de GitHub.
