@@ -59,6 +59,9 @@ export const components = {
   th: (props: any) => <th className="p-4 font-bold border-b border-black/10 dark:border-white/10" {...props} />,
   tr: (props: any) => <tr className="border-b border-black/5 dark:border-white/5 last:border-b-0 hover:bg-black/5 dark:hover:bg-white/5 transition-colors" {...props} />,
   td: (props: any) => <td className="p-4" {...props} />,
+  img: (props: any) => <img className="rounded-xl my-6 border border-black/10 dark:border-white/10 max-w-full h-auto" {...props} />,
+  video: (props: any) => <video className="rounded-xl w-full my-6 border border-black/10 dark:border-white/10" controls {...props} />,
+  iframe: (props: any) => <iframe className="rounded-xl w-full my-6 border border-black/10 dark:border-white/10" {...props} />,
   pre: (props: any) => {
     return (
       <div className="relative my-4 rounded-lg bg-[#F0F0F0] dark:bg-[#262626] code-block-wrapper text-sm group">
