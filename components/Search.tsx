@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { Search as SearchIcon } from "lucide-react";
+import { Search as SearchIcon, Command } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { getDocsConfig } from "@/config/docs";
@@ -46,7 +46,7 @@ export function Search() {
       >
         <SearchIcon className="h-4 w-4" />
         <span className="text-sm font-medium hidden md:inline-block">Buscar configuración...</span>
-        <span className="text-xs font-mono bg-black/5 dark:bg-white/10 p-1 rounded-sm ml-auto hidden md:inline-block">⌘K</span>
+        <span className="text-xs font-mono bg-black/5 dark:bg-white/10 px-1.5 py-0.5 rounded-sm ml-auto hidden md:flex items-center gap-0.5"><Command className="w-3 h-3" />K</span>
       </button>
 
       {isOpen && (

@@ -14,7 +14,7 @@ const createHeading = (Tag: "h1" | "h2" | "h3" | "h4" | "h5" | "h6") => {
         {id && (
           <a
              href={`#${id}`}
-             className="absolute -left-6 top-1/2 -translate-y-1/2 text-gray-400 opacity-0 transition-opacity hover:text-accent group-hover:opacity-100 !no-underline !text-xl"
+             className="absolute -left-8 top-0 flex h-full w-8 items-center justify-center pr-2 text-gray-400 opacity-0 transition-opacity duration-300 hover:text-accent group-hover:opacity-100 !no-underline !text-xl"
              aria-hidden="true"
              tabIndex={-1}
           >
